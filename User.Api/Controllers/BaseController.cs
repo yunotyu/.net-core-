@@ -18,7 +18,7 @@ namespace User.Api.Controllers
         {
             UserIdentity = new UserIdentity()
             {
-                UserId = 1,
+                UserId = 2,
                 Name = "yfr"
             };
         }

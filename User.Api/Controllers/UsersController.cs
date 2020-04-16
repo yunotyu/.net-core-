@@ -26,7 +26,13 @@ namespace User.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Json(_userContext.AppUser.AsNoTracking().Where(u=>u.Id == UserIdentity.UserId).FirstOrDefault());
+            //加上Include(u => u.Properties)才能获取到导航属性的值
+            var user=_userContext.AppUser.AsNoTracking().Include(u => u.Properties).SingleOrDefault(u=>u.Id == UserIdentity.UserId);
+            if (user == null)
+            {
+                var ex= new UserOperationException($"用户不存在id：{user.Id}"); 
+            }
+            return Json(user);
         }
 
     }
