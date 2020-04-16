@@ -19,6 +19,7 @@ namespace User.Api.Controllers
 
         public UsersController(UserContext userContext)
         {
+           
             _userContext = userContext;
         }
 
