@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using log4net;
 using log4net.Config;
@@ -26,8 +27,47 @@ namespace User.Api
         public Startup(IConfiguration configuration)
         {
             LoggerRepository = LogManager.CreateRepository("NETCoreRepository");
-            XmlConfigurator.Configure(LoggerRepository, new FileInfo("log4net.config"));
+            //当配置文件发生修改时，重新加载文件
+            XmlConfigurator.ConfigureAndWatch(LoggerRepository, new FileInfo("Configs/log4net.config"));
+            //GetLogger第一个参数是我们在Startup定义的LoggerRepository名字，
+            //第二参数是我们在配置文件定义的logger节点的logger对象，可以定义多个logger（日志打印对象）
+            ILog logger = LogManager.GetLogger(Startup.LoggerRepository.Name, "logger1");
+        
+            //线程扫描写入日志，高并发
+            ThreadPool.QueueUserWorkItem((o) =>
+            {
+                while (true)
+                {
+                    if (GlobalExceptionFilter.LogDic.Count > 0)
+                    {
+                        //这里要先把字典缓存的值使用别的数据类型先转换，不然直接使用变量指向，会直接指向原来
+                        //缓存字典的值，如果缓存字典清空了，那么该指向也没有值
+                        HashSet<KeyValuePair<string,string>> datas = GlobalExceptionFilter.LogDic.ToHashSet();
+                        GlobalExceptionFilter.LogDic.Clear();
+
+                        foreach (var data in datas)
+                        {
+                            var key = data.Key;
+                            var msg = data.Value;
+                            if (!string.IsNullOrEmpty(key) && !string.IsNullOrEmpty(msg))
+                            {
+                                if (key.Contains("exception"))
+                                {
+                                    logger.Error(msg);
+                                }
+                                if (key.Contains("error"))
+                                {
+                                    logger.Error(msg);
+                                }
+                            }
+                        }
+                    }
+                    Thread.Sleep(5000);
+                }
+            });
+
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }

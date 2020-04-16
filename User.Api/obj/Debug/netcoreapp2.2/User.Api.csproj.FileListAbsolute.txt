@@ -12,3 +12,4 @@ C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.R
 C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\User.Api.pdb
 C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.dll
 C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.pdb
+C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\Configs\log4net.config

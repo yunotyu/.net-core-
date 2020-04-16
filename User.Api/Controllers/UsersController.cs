@@ -30,7 +30,7 @@ namespace User.Api.Controllers
             var user=_userContext.AppUser.AsNoTracking().Include(u => u.Properties).SingleOrDefault(u=>u.Id == UserIdentity.UserId);
             if (user == null)
             {
-                var ex= new UserOperationException($"用户不存在id：{user.Id}"); 
+                throw new UserOperationException($"用户不存在id：{UserIdentity.UserId}"); 
             }
             return Json(user);
         }
