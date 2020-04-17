@@ -36,7 +36,7 @@ namespace User.Api
             //GetLogger第一个参数是我们在Startup定义的LoggerRepository名字，
             //第二参数是我们在配置文件定义的logger节点的logger对象，可以定义多个logger（日志打印对象）
             ILog logger = LogManager.GetLogger(Startup.LoggerRepository.Name, "logger1");
-        
+
             //线程扫描写入日志，高并发
             ThreadPool.QueueUserWorkItem((o) =>
             {
@@ -46,7 +46,7 @@ namespace User.Api
                     {
                         //这里要先把字典缓存的值使用别的数据类型先转换，不然直接使用变量指向，会直接指向原来
                         //缓存字典的值，如果缓存字典清空了，那么该指向也没有值
-                        HashSet<KeyValuePair<string,string>> datas = LogDic.ToHashSet();
+                        HashSet<KeyValuePair<string, string>> datas = LogDic.ToHashSet();
                         LogDic.Clear();
 
                         foreach (var data in datas)
@@ -79,52 +79,58 @@ namespace User.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<UserContext>(options => {
+            services.AddDbContext<UserContext>(options =>
+            {
                 options.UseMySQL(Configuration.GetConnectionString("Mysql"));
             });
 
-          
-            services.AddMvc(options=> {
-                //添加全局异常过滤器
-                options.Filters.Add<GlobalExceptionFilter>();
-                }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddMvc(options =>
+            {
+                ////添加全局异常过滤器
+                //options.Filters.Add<GlobalExceptionFilter>();
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-           
 
-            //处理全局异常,任何地方的异常都能捕获到
-            app.UseExceptionHandler(builder=> {
-                builder.Run(async context=> {
-                    
-                    //获取异常
-                    var exceptionFeature = context.Features.Get<IExceptionHandlerPathFeature>();
-                   
-                    //?. 检查对象是否为null运算符，如果exceptionFeature为null，不获取后面Error属性的值
-                    Exception error = exceptionFeature?.Error;
-                   
-                    //把异常添加到队列进行日志打印,使用Guid是防止键名重复
-                    LogDic.Add(Guid.NewGuid() + "error", error.Message + "/r/n" + error.StackTrace);
+            //如果是开发环境
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-                    //如果是开发环境
-                    if (env.IsDevelopment())
-                    {
-                        app.UseDeveloperExceptionPage();
-                    }
-                    //生产环境
-                    else
-                    {
-                        await context.Response.WriteAsync(new JsonResult("服务器内部未知错误").ToString());
-                    }
-
+            //生产环境
+            else
+            {   
+                //能捕获中间件里的异常，无法捕获到直接写再Config()里的代码的异常
+                //自定义异常处理中间
+                app.UseExceptionHandler((builder)=> {
+                    builder.Run(HandlerException);
                 });
-            });
 
+            }
+
+            async Task HandlerException (HttpContext context)
+            {
+                //获取异常
+                var exceptionFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+
+                //?. 检查对象是否为null运算符，如果exceptionFeature为null，不获取后面Error属性的值
+                Exception error = exceptionFeature?.Error;
+
+                //把异常添加到队列进行日志打印,使用Guid是防止键名重复
+                LogDic.Add(Guid.NewGuid() + "error", error.Message + "\n\r" + error.StackTrace);
+                
+                context.Response.ContentType="text/plain;charset=utf-8";
+                await context.Response.WriteAsync("服务器内部未知错误");
+            }
+
+            
             app.UseMvc();
-            int a = 0;
-            int b = 7 / a;
+         
             InitUserData(app);
 
         }
@@ -134,7 +140,6 @@ namespace User.Api
         {
             try
             {
-
                 using (var scope = app.ApplicationServices.CreateScope())
                 {
                     var userContext = scope.ServiceProvider.GetRequiredService<UserContext>();
