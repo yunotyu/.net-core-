@@ -1,4 +1,6 @@
+using FluentAssertions;
 using log4net;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Moq;
@@ -6,6 +8,7 @@ using System;
 using System.Threading.Tasks;
 using User.Api.Controllers;
 using User.Api.Data;
+using User.Api.Models;
 using Xunit;
 
 namespace User.Api.Unit.Tests
@@ -50,8 +53,32 @@ namespace User.Api.Unit.Tests
             var controller = new UsersController(context);
 
             var response = await controller.Get();
-            //判断最后的结果是不是JSON，如果是，测试成功
-            Assert.IsType<JsonResult>(response);
+            ////判断最后的结果是不是JSON，如果是，测试成功
+            //Assert.IsType<JsonResult>(response);
+
+            var result = response.Should().BeOfType<JsonResult>().Subject;
+            var appUser = result.Value.Should().BeAssignableTo<AppUser>().Subject;
+            appUser.Id.Should().Be(1);
+            appUser.Name.Should().Be("yfr");
+        }
+
+        [Fact]
+        public async Task Patch_ReturnNewName_WithExpectedNewPara()
+        {
+            var context = GetUserContext();
+            UsersController controller = new UsersController(context);
+            //使用jsonpatch对原来的值进行替换
+            var data = new JsonPatchDocument<AppUser>();
+            data.Replace(u => u.Name, "yu");
+            var response =await controller.Patch(data);
+
+            var result = response.Should().BeOfType<JsonResult>().Subject;
+            var appUser = result.Value.Should().BeAssignableTo<AppUser>().Subject;
+            appUser.Name.Should().Be("yu");
+
+            var userModel =await context.AppUser.SingleOrDefaultAsync(u => u.Name == "yu");
+            userModel.Should().NotBeNull();
+            userModel.Name.Should().Be("yu");
         }
     }
 }

@@ -51,7 +51,7 @@ namespace User.Api.Controllers
         public async Task<IActionResult> Patch([FromBody]JsonPatchDocument<AppUser>patch)
         {
             var user = await _userContext.AppUser.Include(u => u.Properties).SingleOrDefaultAsync(u => u.Id == UserIdentity.UserId);
-            
+
             using (var tra = _userContext.Database.BeginTransaction())
             {
                 try
@@ -66,12 +66,12 @@ namespace User.Api.Controllers
                     _userContext.SaveChanges();
                     tra.Commit();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     tra.Rollback();
                 }
             }
-          
+
             return Json(user);
         }
     }
