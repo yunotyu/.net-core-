@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Api", "User.Api\User.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E0E2696E-BA2D-4141-B792-16CBB6359B0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.Api.Unit.Tests", "User.Api.Unit.Tests\User.Api.Unit.Tests.csproj", "{489CBE41-3EB3-4204-ABA1-E3FE450A407F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Api.Unit.Tests", "User.Api.Unit.Tests\User.Api.Unit.Tests.csproj", "{489CBE41-3EB3-4204-ABA1-E3FE450A407F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Identity", "User.Identity\User.Identity.csproj", "{D942DD91-3517-4D51-8F14-159AF3E21BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Api", "Api.Gateway\Gateway.Api.csproj", "{C8B55E6E-E8BE-4EC0-991C-215709C70204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{489CBE41-3EB3-4204-ABA1-E3FE450A407F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{489CBE41-3EB3-4204-ABA1-E3FE450A407F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{489CBE41-3EB3-4204-ABA1-E3FE450A407F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D942DD91-3517-4D51-8F14-159AF3E21BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D942DD91-3517-4D51-8F14-159AF3E21BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D942DD91-3517-4D51-8F14-159AF3E21BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D942DD91-3517-4D51-8F14-159AF3E21BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B55E6E-E8BE-4EC0-991C-215709C70204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B55E6E-E8BE-4EC0-991C-215709C70204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B55E6E-E8BE-4EC0-991C-215709C70204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B55E6E-E8BE-4EC0-991C-215709C70204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

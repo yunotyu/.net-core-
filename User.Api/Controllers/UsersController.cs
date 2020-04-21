@@ -27,7 +27,7 @@ namespace User.Api.Controllers
         /// <summary>
         /// 获取用户数据 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>返回一个JSON对象给前端,因为是ControllerBase,是WEBAPI的风格，所以会帮我们转换为JSON对象</returns>
         [Route("")]
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -38,7 +38,7 @@ namespace User.Api.Controllers
             {
                 throw new UserOperationException($"用户不存在id：{UserIdentity.UserId}"); 
             }
-            return Json(user);
+            return Ok(user);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace User.Api.Controllers
         /// <returns></returns>
         [Route("")]
         [HttpPatch]
-        public async Task<IActionResult> Patch([FromBody]JsonPatchDocument<AppUser>patch)
+        public async Task<IEnumerable<object>> Patch([FromBody]JsonPatchDocument<AppUser>patch)
         {
             var user = await _userContext.AppUser.Include(u => u.Properties).SingleOrDefaultAsync(u => u.Id == UserIdentity.UserId);
 
@@ -72,7 +72,26 @@ namespace User.Api.Controllers
                 }
             }
 
-            return Json(user);
+            return new object[] { user };
+        }
+
+        /// <summary>
+        /// 根据手机检查用户是否存在
+        /// </summary>
+        /// <param name="phone"></param>
+        /// <returns></returns>
+        [Route("check-or-create")]
+        [HttpPost]
+        public async Task<int> CheckOrCreateUser([FromForm]string phone)
+        {
+            var user = await _userContext.AppUser.SingleOrDefaultAsync(u => u.Phone == phone);
+            //TODO:要对手机号码进行验证
+            if (user == null)
+            {
+                _userContext.AppUser.Add(new AppUser { Phone = phone });
+                _userContext.SaveChanges();
+            }
+            return user.Id;
         }
     }
 }

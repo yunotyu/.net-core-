@@ -10,7 +10,7 @@ using User.Api.Entities.Dtos;
 
 namespace User.Api.Controllers
 {
-    public class BaseController : Controller
+    public class BaseController : ControllerBase
     {
         public UserIdentity UserIdentity { get; set; }
 
