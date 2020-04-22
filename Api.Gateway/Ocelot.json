@@ -1,0 +1,28 @@
+{
+  //路由是API网关最基本也是最核心的功能、ReRoutes下就是由多个路由节点组成。
+  "ReRoutes": [
+    {
+      //配置下游服务,实际访问的控制器方法
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "Get" ],
+      //在访问上面这个服务时，需要token
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    //这个网关的地址
+    "BaseUrl": "http://localhost:6688"
+  }
+}
