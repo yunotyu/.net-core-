@@ -19,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using User.Api.Data;
 using User.Api.Filters;
+using MySql.Data;
 
 namespace User.Api
 {
@@ -26,7 +27,9 @@ namespace User.Api
     {
         public static ILoggerRepository LoggerRepository { get; set; }
 
+        //异常日志缓存字典
         public static Dictionary<string, string> LogDic = new Dictionary<string, string>();
+
 
         public Startup(IConfiguration configuration)
         {
@@ -83,19 +86,12 @@ namespace User.Api
             {
                 options.UseMySQL(Configuration.GetConnectionString("Mysql"));
             });
-
-
-            services.AddMvc(options =>
-            {
-                ////添加全局异常过滤器
-                //options.Filters.Add<GlobalExceptionFilter>();
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
             //如果是开发环境
             if (env.IsDevelopment())
             {
@@ -104,16 +100,16 @@ namespace User.Api
 
             //生产环境
             else
-            {   
+            {
                 //能捕获中间件里的异常，无法捕获到直接写再Config()里的代码的异常
                 //自定义异常处理中间
-                app.UseExceptionHandler((builder)=> {
+                app.UseExceptionHandler((builder) => {
                     builder.Run(HandlerException);
                 });
 
             }
 
-            async Task HandlerException (HttpContext context)
+            async Task HandlerException(HttpContext context)
             {
                 //获取异常
                 var exceptionFeature = context.Features.Get<IExceptionHandlerPathFeature>();
@@ -123,18 +119,14 @@ namespace User.Api
 
                 //把异常添加到队列进行日志打印,使用Guid是防止键名重复
                 LogDic.Add(Guid.NewGuid() + "error", error.Message + "\n\r" + error.StackTrace);
-                
-                context.Response.ContentType="text/plain;charset=utf-8";
+
+                context.Response.ContentType = "text/plain;charset=utf-8";
                 await context.Response.WriteAsync("服务器内部未知错误");
             }
 
-            
             app.UseMvc();
-         
             InitUserData(app);
-
         }
-
 
         private async Task InitUserData(IApplicationBuilder app, int? retry = 0)
         {

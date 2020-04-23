@@ -1,4 +1,5 @@
 ﻿using log4net;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -52,5 +53,8 @@ namespace User.Api.Filters
             //表示异常已经被处理完成
             context.ExceptionHandled = true;
         }
+
+
+        
     }
 }

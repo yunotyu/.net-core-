@@ -1,0 +1,4 @@
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.AssemblyInfo.cs
