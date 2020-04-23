@@ -1,0 +1,53 @@
+{
+  "encrypt": "X22baWqyBbfiTgZNb5pmb0YogAs+7xSSnqZCNR04FLM=",
+  "datacenter": "dc1",
+  "server": true,
+  "bootstrap": true,
+  "data_dir": "./data",
+  "ui": true,
+  "bind_addr": "127.0.0.1",
+  "client_addr": "127.0.0.1",
+
+  "services": [
+    {
+      "id": "userapi01",
+      "name": "userapi01",
+      "tags": [
+        "userapi01"
+      ],
+      "address": "localhost",
+      "port": 8888,
+      "enable_tag_override": false,
+
+      "checks": [
+        {
+          "http": "http://127.0.0.1:8888/health",
+          "tls_skip_verify": true,
+          "method": "GET",
+          "interval": "5s",
+          "timeout": "30s"
+        }
+      ]
+    },
+    {
+      "id": "identity01",
+      "name": "identity01",
+      "tags": [
+        "identity01"
+      ],
+      "address": "127.0.0.1",
+      "port": 5000,
+      "enable_tag_override": false,
+      "checks": [
+        {
+          "http": "http://127.0.0.1:5000/health",
+          "tls_skip_verify": true,
+          "method": "GET",
+          "interval": "5s",
+          "timeout": "30s"
+        }
+      ]
+    }
+  ]
+
+}

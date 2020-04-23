@@ -1,0 +1,28 @@
+﻿#模板文件的版本
+version: "3"
+
+#多个服务
+services: 
+  db:
+    image: mysql:5.7
+    container_name: "mysql02"
+    #容器创建时执行的命令
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+    restart: always
+    ports: 
+      - '3306:3306'
+    environment:
+       MYSQL_ROOT_PASSWORD: 123
+       MYSQL_USER: yfr
+       MYSQL_PASSWORD: 123
+    volumes:
+      - /docker/mysql/config/my.cnf:/etc/my.cnf
+      - /docker/mysql/dbdata:/var/lib/mysql 
+  
+  web:
+    build: .
+    container_name: "webapi2"
+    ports: 
+      - '9999:80'
+    depends_on:
+      - db

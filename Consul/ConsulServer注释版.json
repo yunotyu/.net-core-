@@ -1,0 +1,76 @@
+{
+  //配置集群的Consul之间通讯的密钥
+  "encrypt": "X22baWqyBbfiTgZNb5pmb0YogAs+7xSSnqZCNR04FLM=",
+  //配置这个consul的数据中心名字
+  "datacenter": "dc1",
+  //这个consul是集群里的主服务器，其他consul都是属于客户端，需要同步这个设备的数据
+  "server": true,
+  //以引导方式启动这个consul，只有当这个consul是集群里的主服务器，才能使用这个模式
+  "bootstrap": true,
+  //存储consul数据的文件夹
+  "data_dir": "./data",
+  ////存储consul web的UI界面资源的位置
+  //"ui_dir": "./ui",
+  //启用浏览器的UI界面，跟ui_dir只能存在一个
+  "ui": true,
+  //在集群里，给其他consul访问的地址
+  "bind_addr": "127.0.0.1",
+  //绑定集群的其他consul的地址
+  //"client_addr": null,
+  //注册多个服务,服务的配置必须id, tags, address, meta, port, enable_tag_override,check这些节点
+  //具体可以看官网的文档的Agent的Service Definition
+  "services": [
+    {
+      "id": "userapi01",
+      "name": "userapi01",
+      "tags": [
+        "userapi01"
+      ],
+      "address": "127.0.0.1",
+      "port": 8888,
+      "enable_tag_override": false,
+
+      //使用http的方式来进行健康检查，可以使用TCP,DOCKER等
+      "checks": [
+        {
+          //启动这个Consul时，执行的命令
+          //"args": [ "/bin/check_redis", "-p", "6000" ],
+
+          //在对应的项目创建一个控制器方法来专门用于检查
+          "http": "http://127.0.0.1:8888/health",
+          //不启用HTTPS
+          "tls_skip_verify": true,
+          "method": "GET",
+          //给请求设置内容
+          //"header": { "Content-Type": "application/json" },
+          //"body": "{\"method\":\"health\"}",
+          //每1s进行一次健康检查
+          "interval": "5s",
+          //30s没反应，去除该服务
+          "timeout": "30s"
+        }
+      ]
+    },
+    {
+      "id": "identity01",
+      "name": "identity01",
+      "tags": [
+        "identity01"
+      ],
+      "address": "127.0.0.1",
+      "port": 5000,
+      "enable_tag_override": false,
+      "checks": [
+        {
+          //在对应的项目创建一个控制器方法来专门用于检查
+          "http": "http://127.0.0.1:5000/health",
+          //不启用HTTPS
+          "tls_skip_verify": true,
+          "method": "GET",
+          "interval": "5s",
+          "timeout": "30s"
+        }
+      ]
+    }
+  ]
+}
