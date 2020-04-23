@@ -23,8 +23,7 @@ namespace Gateway.Api
             .ConfigureAppConfiguration((hostingContext, builder) =>
             {   //获取项目的根目录
                 builder.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
-                //支持热加载
-                .AddJsonFile("Ocelot.json", optional:false, reloadOnChange:true);
+                .AddJsonFile("Ocelot.json");
             }) 
                 .UseStartup<Startup>();
     }

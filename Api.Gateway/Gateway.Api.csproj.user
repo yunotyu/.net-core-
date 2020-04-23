@@ -5,6 +5,5 @@
   </PropertyGroup>
   <PropertyGroup>
     <ActiveDebugProfile>Gateway.Api</ActiveDebugProfile>
-    <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
 </Project>

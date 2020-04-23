@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.DependencyInjection;
-using IdentityServer4.AccessTokenValidation;
-using Ocelot.Provider.Consul;
 
 namespace Gateway.Api
 {
@@ -25,9 +23,8 @@ namespace Gateway.Api
             //在这里添加identity server4的认证，当要访问这个网关的某个下游服务时，需要使用identity server4提供的token
             //所以需要单独发请求先去获取identity server4提供的token，然后利用这个token来访问
             //需要在Ocelot的配置文件配置哪个下游服务需要认证
-            //用高版本的Ocelot，需要单独安装IdentityServer4.AccessTokenValidation
             services.AddAuthentication()
-                .AddIdentityServerAuthentication(authenticationProviderSchem, options =>
+                .AddIdentityServerAuthentication(authenticationProviderSchem,options=>
                 {
                     //去哪个地址验证这个token是否正确
                     options.Authority = "http://localhost:5000";
@@ -41,10 +38,7 @@ namespace Gateway.Api
                 });
 
             //Ocelot.DependencyInjection
-            services.AddOcelot()
-                //添加consul到ocelot
-                    .AddConsul()
-                 .AddConfigStoredInConsul();;
+            services.AddOcelot();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
