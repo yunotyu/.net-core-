@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.DependencyInjection;
+using Ocelot.Provider.Consul;
 
 namespace Gateway.Api
 {
@@ -38,7 +39,10 @@ namespace Gateway.Api
                 });
 
             //Ocelot.DependencyInjection
-            services.AddOcelot();
+            services.AddOcelot()
+                //添加Ocelot支持Consul
+                 .AddConsul()
+                .AddConfigStoredInConsul();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

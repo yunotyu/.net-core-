@@ -2,3 +2,11 @@ C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.cspro
 C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.AssemblyInfoInputs.cache
 C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.AssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\config\ConsulServer.json
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\Consul.deps.json
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\Consul.runtimeconfig.json
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\Consul.runtimeconfig.dev.json
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\Consul.dll
+C:\Users\admin\source\repos\User.Api\Consul\bin\Debug\netcoreapp2.2\Consul.pdb
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.dll
+C:\Users\admin\source\repos\User.Api\Consul\obj\Debug\netcoreapp2.2\Consul.pdb

@@ -23,6 +23,11 @@
   ],
   "GlobalConfiguration": {
     //这个网关的地址
-    "BaseUrl": "http://localhost:6688"
+    "BaseUrl": "http://localhost:6688",
+    //consul的http的地址
+    "ServiceDiscoveryProvider": {
+      "Host": "127.0.0.1",
+      "Port": 8500
+    }
   }
 }
