@@ -2,32 +2,38 @@
   //路由是API网关最基本也是最核心的功能、ReRoutes下就是由多个路由节点组成。
   "ReRoutes": [
     {
-      //配置下游服务,实际访问的控制器方法
-      "DownstreamPathTemplate": "/api/users",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8888
-        }
-      ],
-      //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
-      "UpstreamPathTemplate": "/users",
-      "UpstreamHttpMethod": [ "Get" ],
-      //启用ocelot的负载均衡功能
-      "LoadBalancerOptions": {
-        "Type": "LeastConnection"
-      },
       //在访问上面这个服务时，需要token
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "finbook",
         "AllowedScopes": []
-      }
+      },
+      //配置下游服务,实际访问的控制器方法
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      //启用ocelot的负载均衡功能
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "UpstreamHttpMethod": [ "Get" ],
+      //使用Consul时，这个可以不要
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 8888
+      //  }
+      //],
+      //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
+      "UpstreamPathTemplate": "/users",
+      //给下面的consul服务的名字
+      "ServiceName": "api1",
+      //使用下面的consul作为服务发现,注册服务也是在Consul
+      //这里Ocelot只是负责转发请求到Ocelot
+      "UseServiceDiscovery": true
     }
   ],
   "GlobalConfiguration": {
     //这个网关的地址
-    "BaseUrl": "http://localhost:6688",
+    "BaseUrl": "http://localhost:6699",
     //consul的http的地址
     "ServiceDiscoveryProvider": {
       "Scheme": "http",

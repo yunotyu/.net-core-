@@ -20,6 +20,8 @@ using Microsoft.Extensions.Options;
 using User.Api.Data;
 using User.Api.Filters;
 using MySql.Data;
+using User.Api.Entities;
+using System.Net.Http;
 
 namespace User.Api
 {
@@ -29,7 +31,9 @@ namespace User.Api
 
         //异常日志缓存字典
         public static Dictionary<string, string> LogDic = new Dictionary<string, string>();
-
+        private ConsulService _consulService;
+        //服务注册后返回的状态码
+        private string statusCode = null;
 
         public Startup(IConfiguration configuration)
         {
@@ -90,7 +94,7 @@ namespace User.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime)
         {
             //如果是开发环境
             if (env.IsDevelopment())
@@ -124,6 +128,10 @@ namespace User.Api
                 await context.Response.WriteAsync("服务器内部未知错误");
             }
 
+            //在程序完全启动后，做一些事
+            lifetime.ApplicationStarted.Register(RegisterService);
+            lifetime.ApplicationStopped.Register(DelRegisterService);
+
             app.UseMvc();
             InitUserData(app);
         }
@@ -151,6 +159,52 @@ namespace User.Api
                 {
                     await InitUserData(app, retry);
                 }
+            }
+
+        }
+
+
+
+        /// <summary>
+        /// 注册这个服务到Consul里
+        /// </summary>
+        private async void RegisterService()
+        {
+            _consulService = new ConsulService();
+            _consulService.Id = "user01";
+            _consulService.Name = "user01";
+            _consulService.Tags = new List<string> { "user01" };
+            _consulService.Address = "127.0.0.1";
+            _consulService.Port = 8888;
+            _consulService.Enable_Tag_Override = false;
+            _consulService.checks = new List<ConsulServiceCheck>
+                {
+                    new ConsulServiceCheck()
+                    {
+                        Name= "user01check",
+                        Http= "http://127.0.0.1:8888/health",
+                        Tls_Skip_Verify= true,
+                        Method= "GET",
+                        Interval= "5s",
+                        Timeout= "30s",
+                    }
+                };
+            HttpClient client = new HttpClient();
+            var response = await client.PutAsJsonAsync<ConsulService>("http://127.0.0.1:8500/v1/agent/service/register", _consulService);
+            statusCode = response.StatusCode.ToString();
+        }
+
+        /// <summary>
+        /// 在程序结束时，删除服务到Consul
+        /// </summary>
+        private async void DelRegisterService()
+        {
+            //如果前面的注册成功
+            if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase)) ;
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null);
+
             }
 
         }
