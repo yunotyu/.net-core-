@@ -1,0 +1,13 @@
+C:\Users\admin\source\repos\User.Api\User.Api01\bin\Debug\netcoreapp2.2\User.Api01.deps.json
+C:\Users\admin\source\repos\User.Api\User.Api01\bin\Debug\netcoreapp2.2\User.Api01.runtimeconfig.json
+C:\Users\admin\source\repos\User.Api\User.Api01\bin\Debug\netcoreapp2.2\User.Api01.runtimeconfig.dev.json
+C:\Users\admin\source\repos\User.Api\User.Api01\bin\Debug\netcoreapp2.2\User.Api01.dll
+C:\Users\admin\source\repos\User.Api\User.Api01\bin\Debug\netcoreapp2.2\User.Api01.pdb
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.RazorAssemblyInfo.cache
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.RazorAssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.AssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.RazorTargetAssemblyInfo.cache
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.dll
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.pdb

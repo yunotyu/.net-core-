@@ -200,7 +200,7 @@ namespace User.Api
         private async void DelRegisterService()
         {
             //如果前面的注册成功
-            if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase)) ;
+            if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase))
             {
                 HttpClient client = new HttpClient();
                 var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null);

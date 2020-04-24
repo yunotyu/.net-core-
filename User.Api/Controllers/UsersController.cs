@@ -41,6 +41,13 @@ namespace User.Api.Controllers
             return Ok(user);
         }
 
+        [Route("port")]
+        [HttpGet]
+        public  IActionResult GetPort()
+        {
+            return Ok(Request.HttpContext.Connection.LocalPort);
+        }
+
         /// <summary>
         /// 更新用户数据
         /// </summary>
