@@ -57,15 +57,17 @@ namespace User.Identity
         /// </summary>
         private async void RegisterService()
         {
-            //下面的内容可以放在一个配置文件里，然后转换json为对象
-            _consulService = new ConsulService();
-            _consulService.Id = "identity01";
-            _consulService.Name = "identity01";
-            _consulService.Tags = new List<string>{ "identity01" };
-            _consulService.Address = "127.0.0.1";
-            _consulService.Port = 5000;
-            _consulService.Enable_Tag_Override = false;
-            _consulService.checks = new List<ConsulServiceCheck>
+            try
+            {
+                //下面的内容可以放在一个配置文件里，然后转换json为对象
+                _consulService = new ConsulService();
+                _consulService.Id = "identity01";
+                _consulService.Name = "identity01";
+                _consulService.Tags = new List<string> { "identity01" };
+                _consulService.Address = "127.0.0.1";
+                _consulService.Port = 5000;
+                _consulService.Enable_Tag_Override = false;
+                _consulService.checks = new List<ConsulServiceCheck>
                 {
                     new ConsulServiceCheck()
                     {
@@ -77,9 +79,15 @@ namespace User.Identity
                         Timeout= "30s",
                     }
                 };
-            HttpClient client = new HttpClient();
-            var response=await client.PutAsJsonAsync<ConsulService>("http://127.0.0.1:8500/v1/agent/service/register", _consulService);
-            statusCode= response.StatusCode.ToString();
+                HttpClient client = new HttpClient();
+                var response = await client.PutAsJsonAsync<ConsulService>("http://127.0.0.1:8500/v1/agent/service/register", _consulService);
+                statusCode = response.StatusCode.ToString();
+            }
+            catch(Exception e)
+            {
+
+            }
+          
         }
 
         /// <summary>
@@ -87,12 +95,20 @@ namespace User.Identity
         /// </summary>
         private async void DelRegisterService()
         {
-            //如果前面的注册成功
-            if (string.Equals(statusCode,"ok", StringComparison.CurrentCultureIgnoreCase));
+            try
             {
-                HttpClient client = new HttpClient();
-                var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null);
+                //如果前面的注册成功
+                if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase)) ;
+                {
+                    HttpClient client = new HttpClient();
+                    var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null);
 
+                }
+            }
+            catch (Exception)
+            {
+
+                
             }
           
         }

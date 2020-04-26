@@ -41,9 +41,15 @@ namespace User.Api.Controllers
             return Ok(user);
         }
 
+        
+        /// <summary>
+        /// 做负载均衡测试
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Route("port")]
         [HttpGet]
-        public  IActionResult GetPort()
+        public IActionResult GetPort(int id)
         {
             return Ok(Request.HttpContext.Connection.LocalPort);
         }

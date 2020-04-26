@@ -3,6 +3,7 @@ C:\Users\admin\source\repos\User.Api\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway
 C:\Users\admin\source\repos\User.Api\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.runtimeconfig.dev.json
 C:\Users\admin\source\repos\User.Api\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.dll
 C:\Users\admin\source\repos\User.Api\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.pdb
+C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.csprojAssemblyReference.cache
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorAssemblyInfo.cache
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorAssemblyInfo.cs
@@ -11,4 +12,3 @@ C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorTargetAssemblyInfo.cache
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.dll
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.pdb
-C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.csprojAssemblyReference.cache

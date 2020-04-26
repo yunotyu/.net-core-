@@ -11,3 +11,4 @@ C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api
 C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.RazorTargetAssemblyInfo.cache
 C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.dll
 C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.pdb
+C:\Users\admin\source\repos\User.Api\User.Api01\obj\Debug\netcoreapp2.2\User.Api01.csprojAssemblyReference.cache

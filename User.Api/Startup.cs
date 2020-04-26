@@ -170,14 +170,16 @@ namespace User.Api
         /// </summary>
         private async void RegisterService()
         {
-            _consulService = new ConsulService();
-            _consulService.Id = "user01";
-            _consulService.Name = "user01";
-            _consulService.Tags = new List<string> { "user01" };
-            _consulService.Address = "127.0.0.1";
-            _consulService.Port = 8888;
-            _consulService.Enable_Tag_Override = false;
-            _consulService.checks = new List<ConsulServiceCheck>
+            try
+            {
+                _consulService = new ConsulService();
+                _consulService.Id = "user01";
+                _consulService.Name = "user";
+                _consulService.Tags = new List<string> { "user01" };
+                _consulService.Address = "127.0.0.1";
+                _consulService.Port = 8888;
+                _consulService.Enable_Tag_Override = false;
+                _consulService.checks = new List<ConsulServiceCheck>
                 {
                     new ConsulServiceCheck()
                     {
@@ -189,9 +191,18 @@ namespace User.Api
                         Timeout= "30s",
                     }
                 };
-            HttpClient client = new HttpClient();
-            var response = await client.PutAsJsonAsync<ConsulService>("http://127.0.0.1:8500/v1/agent/service/register", _consulService);
-            statusCode = response.StatusCode.ToString();
+                using(HttpClient client = new HttpClient())
+                {
+                    var response = await client.PutAsJsonAsync<ConsulService>("http://127.0.0.1:8500/v1/agent/service/register", _consulService);
+                    statusCode = response.StatusCode.ToString();
+                }
+                                
+            }
+           catch(Exception e)
+            {
+                //把异常添加到队列进行日志打印,使用Guid是防止键名重复
+                LogDic.Add(Guid.NewGuid() + "error", e.Message + "\n\r" + e.StackTrace);
+            }
         }
 
         /// <summary>
@@ -199,13 +210,25 @@ namespace User.Api
         /// </summary>
         private async void DelRegisterService()
         {
-            //如果前面的注册成功
-            if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase))
+            try
             {
-                HttpClient client = new HttpClient();
-                var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null);
+                //如果前面的注册成功
+                if (string.Equals(statusCode, "ok", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    using (HttpClient client = new HttpClient())    
+                    {
+                        var response = await client.PutAsync("http://127.0.0.1:8500/v1/agent/service/deregister/" + $"{_consulService.Id}", null); 
+                    }
+
+                }
 
             }
+            catch (Exception e)
+            {
+                //把异常添加到队列进行日志打印,使用Guid是防止键名重复
+                LogDic.Add(Guid.NewGuid() + "error", e.Message + "\n\r" + e.StackTrace);
+            }
+
 
         }
     }

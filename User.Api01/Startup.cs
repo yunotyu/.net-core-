@@ -172,7 +172,7 @@ namespace User.Api
         {
             _consulService = new ConsulService();
             _consulService.Id = "user02";
-            _consulService.Name = "user01";
+            _consulService.Name = "user";
             _consulService.Tags = new List<string> { "user02" };
             _consulService.Address = "127.0.0.1";
             _consulService.Port = 8889;

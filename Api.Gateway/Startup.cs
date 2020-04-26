@@ -38,11 +38,12 @@ namespace Gateway.Api
                     options.RequireHttpsMetadata = false;
                 });
 
+
             //Ocelot.DependencyInjection
             services.AddOcelot()
-                //添加Ocelot支持Consul
+                 //添加Ocelot支持Consul
                  .AddConsul()
-                .AddConfigStoredInConsul();
+                /*.AddConfigStoredInConsul()*/;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
