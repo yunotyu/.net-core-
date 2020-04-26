@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Api", "User.Api\User.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Api01", "User.Api01\User.Api01.csproj", "{2C04C196-228E-41EA-8A0D-E71394CFC03B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{D41629E0-DE7A-4294-A02D-4B94516C845A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resillience", "Resillience\Resillience.csproj", "{4ABCACDC-1080-440C-A21C-F2BC046B1426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,12 +51,17 @@ Global
 		{2C04C196-228E-41EA-8A0D-E71394CFC03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C04C196-228E-41EA-8A0D-E71394CFC03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C04C196-228E-41EA-8A0D-E71394CFC03B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{489CBE41-3EB3-4204-ABA1-E3FE450A407F} = {E0E2696E-BA2D-4141-B792-16CBB6359B0D}
+		{4ABCACDC-1080-440C-A21C-F2BC046B1426} = {D41629E0-DE7A-4294-A02D-4B94516C845A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAA38890-546D-4847-B0EA-870EAE0D34AA}

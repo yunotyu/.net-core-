@@ -1,0 +1,6 @@
+C:\Users\admin\source\repos\User.Api\Resillience\bin\Debug\netcoreapp2.2\Resillience.deps.json
+C:\Users\admin\source\repos\User.Api\Resillience\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.AssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.csprojAssemblyReference.cache

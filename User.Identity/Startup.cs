@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using DnsClient;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -32,7 +34,12 @@ namespace User.Identity
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthCodeService, TestAuthCodeService>();
             services.AddSingleton(new HttpClient());
-            
+            //添加DSN解析对象的注入
+            services.AddSingleton<IDnsQuery>(p=>
+            {
+                return new LookupClient(IPAddress.Parse("127.0.0.1"), 8600);
+            });
+
             services.AddMvc();
         }
 

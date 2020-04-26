@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DnsClient;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -14,11 +16,27 @@ namespace User.Identity.Services
         /// <summary>
         /// 用户服务所在的服务器地址
         /// </summary>
-        private readonly string _userServiceUrl = "http://localhost:8888";
+        private readonly string _userServiceUrl;
 
-        public UserService(HttpClient client)
+        public  UserService(HttpClient client,IDnsQuery dnsQuery)
         {
             _client = client;
+            try
+            {
+                //因为是查询consul的某个服务的服务实例，根据consul文档格式为：服务名.service.consul
+                //所以第一个参数是：service.consul
+                //第二参数是要查询的服务名
+                var services= dnsQuery.ResolveServiceAsync("service.consul", "user").Result;
+                //返回查询到user服务下的第1个服务实例的ip和端口,给这个identity sever4去进行验证使用
+                var host = services.First().AddressList.First();
+                var port = services.First().Port;
+                
+                _userServiceUrl = $"http://{host}:{port}";
+            }
+            catch (Exception e)
+            {
+
+            }
         }
 
         public async Task<int> CheckOrCreate(string phone)
