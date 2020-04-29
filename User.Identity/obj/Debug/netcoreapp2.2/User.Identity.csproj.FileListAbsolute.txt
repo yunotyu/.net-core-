@@ -2,6 +2,9 @@ C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.
 C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.Identity.runtimeconfig.json
 C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.Identity.runtimeconfig.dev.json
 C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.Identity.dll
+C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.Identity.pdb
+C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\Resillience.pdb
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.csprojAssemblyReference.cache
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.RazorAssemblyInfo.cache
@@ -9,6 +12,6 @@ C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.AssemblyInfoInputs.cache
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.AssemblyInfo.cs
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.RazorTargetAssemblyInfo.cache
-C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\User.Identity.pdb
+C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.csproj.CopyComplete
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.dll
 C:\Users\admin\source\repos\User.Api\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.pdb

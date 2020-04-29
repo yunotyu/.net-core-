@@ -1,4 +1,5 @@
 ﻿using DnsClient;
+using log4net;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -11,16 +12,19 @@ namespace User.Identity.Services
 {
     public class UserService : IUserService
     {
-        private readonly HttpClient _client;
-
+        private readonly Resillience.IHttpClient _client;
+        private  readonly ILog _logger;
         /// <summary>
         /// 用户服务所在的服务器地址
         /// </summary>
         private readonly string _userServiceUrl;
 
-        public  UserService(HttpClient client,IDnsQuery dnsQuery)
+    
+
+        public  UserService(Resillience.IHttpClient client,IDnsQuery dnsQuery)
         {
             _client = client;
+            _logger = Startup.logger;
             try
             {
                 //因为是查询consul的某个服务的服务实例，根据consul文档格式为：服务名.service.consul
@@ -43,14 +47,22 @@ namespace User.Identity.Services
         {
             var form = new Dictionary<string, string> { { "phone", phone } };
             //使用x-www-form-urlencoded在postman提交数据
-            var content = new FormUrlEncodedContent(form);
-            var response = await _client.PostAsync(_userServiceUrl + "/api/users/check-or-create", content);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            //var content = new FormUrlEncodedContent(form);
+            try
             {
-                var userId =await  response.Content.ReadAsStringAsync();
-                int.TryParse(userId, out int intUserId);
-                return intUserId;
+                var response = await _client.PostAsync(HttpMethod.Post, form, _userServiceUrl + "/api/users/check-or-create");
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    var userId = await response.Content.ReadAsStringAsync();
+                    int.TryParse(userId, out int intUserId);
+                    return intUserId;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("CheckOrCreate函数在重试后失败," + ex.Message +","+ ex.StackTrace);
+                throw ex;
             }
             //如果不成功，返回id为0
             return 0;

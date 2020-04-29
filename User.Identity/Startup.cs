@@ -1,22 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using DnsClient;
+using log4net;
+using log4net.Config;
+using log4net.Core;
+using log4net.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Resillience;
 using User.Identity.Authentication;
 using User.Identity.Entities;
+using User.Identity.Infrastructure;
 using User.Identity.Services;
 
 namespace User.Identity
 {
     public class Startup
     {
+        public static ILog logger;
         private  ConsulService _consulService ;
         //服务注册后返回的状态码
         private  string statusCode=null;
@@ -33,7 +41,41 @@ namespace User.Identity
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthCodeService, TestAuthCodeService>();
-            services.AddSingleton(new HttpClient());
+
+        
+            ILoggerRepository _loggerRepository;
+            _loggerRepository = LogManager.CreateRepository("NETCoreRepository");
+
+                //当配置文件发生修改时，重新加载文件
+             XmlConfigurator.ConfigureAndWatch(_loggerRepository, new FileInfo("Configs/log4net.config"));
+
+            //GetLogger第一个参数是我们在Startup定义的LoggerRepository名字，
+            //第二参数是我们在配置文件定义的logger节点的logger对象，可以定义多个logger（日志打印对象）
+             logger = LogManager.GetLogger(_loggerRepository.Name, "logger1");
+            
+
+            //注入自定义HttpClient对象的工厂类
+            services.AddSingleton(typeof(ResillienceClientFactory), sp =>
+             {
+                
+                 IHttpContextAccessor contextAccessor = sp.GetRequiredService<IHttpContextAccessor>();
+                
+                 //这些可以配置在配置文件里
+                 //重试次数
+                 int retryCount = 5;
+                 //允许重试多少次,如果超过这个次数，就熔断
+                 int exceptionCountAllowedBeforeBreaking = 5;
+
+                 return new ResillienceClientFactory(logger, retryCount, exceptionCountAllowedBeforeBreaking, contextAccessor);
+
+             });
+
+            //注入自定义的HttpClient对象
+            services.AddSingleton<Resillience.IHttpClient>(serviceProvider=> 
+            {
+                return serviceProvider.GetRequiredService<ResillienceClientFactory>().GetResillienceHttpClient();
+            });
+
             //添加DSN解析对象的注入
             services.AddSingleton<IDnsQuery>(p=>
             {
