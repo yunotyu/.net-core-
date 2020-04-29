@@ -1,0 +1,52 @@
+﻿
+[Header]
+2020-04-28 14:48:47,805 [7] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String origin, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+2020-04-28 14:49:40,308 [6] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String origin, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+2020-04-28 14:55:51,836 [10] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String origin, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+
+[Header]
+2020-04-28 15:53:27,997 [13] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String url, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at Resillience.ResillienceHttpClient.DoPostAsync(HttpMethod method, String url, HttpRequestMessage requestMessage, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 68
+   at Resillience.ResillienceHttpClient.PostAsync(HttpMethod method, Dictionary`2 form, String url, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 49
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+
+[Header]
+2020-04-28 15:56:23,552 [9] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String url, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at Resillience.ResillienceHttpClient.DoPostAsync(HttpMethod method, String url, HttpRequestMessage requestMessage, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 68
+   at Resillience.ResillienceHttpClient.PostAsync(HttpMethod method, Dictionary`2 form, String url, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 49
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+
+[Header]
+2020-04-28 16:00:36,007 [13] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String url, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at Resillience.ResillienceHttpClient.DoPostAsync(HttpMethod method, String url, HttpRequestMessage requestMessage, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 68
+   at Resillience.ResillienceHttpClient.PostAsync(HttpMethod method, Dictionary`2 form, String url, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 49
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+2020-04-28 16:01:19,907 [6] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IAsyncPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String url, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at Resillience.ResillienceHttpClient.DoPostAsync(HttpMethod method, String url, HttpRequestMessage requestMessage, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 68
+   at Resillience.ResillienceHttpClient.PostAsync(HttpMethod method, Dictionary`2 form, String url, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 49
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+
+[Header]
+2020-04-28 16:07:26,523 [13] ERROR logger1 - CheckOrCreate函数在重试后失败,Unable to cast object of type 'Polly.IsPolicy[]' to type 'Polly.Policy[]'.,   at User.Identity.Infrastructure.ResillienceClientFactory.CreatePolicy(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 45
+   at User.Identity.Infrastructure.ResillienceClientFactory.<GetResillienceHttpClient>b__5_0(String url) in C:\Users\admin\source\repos\User.Api\User.Identity\Infrastructure\ResillienceClientFactory.cs:line 40
+   at Resillience.ResillienceHttpClient.HttpInvoker[T](String url, Func`2 action) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 112
+   at Resillience.ResillienceHttpClient.DoPostAsync(HttpMethod method, String url, HttpRequestMessage requestMessage, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 68
+   at Resillience.ResillienceHttpClient.PostAsync(HttpMethod method, Dictionary`2 form, String url, String authorizationToken, String requestId, String authorizationMethod) in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 49
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53

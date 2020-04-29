@@ -1,0 +1,10 @@
+﻿
+[Header]
+2020-04-29 14:16:38,817 [4] ERROR logger1 - CheckOrCreate函数在重试后失败,Exception of type 'System.Net.Http.HttpRequestException' was thrown.,   at Resillience.ResillienceHttpClient.<>c__DisplayClass8_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 105
+--- End of stack trace from previous location where exception was thrown ---
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
+
+[Header]
+2020-04-29 14:26:14,241 [15] ERROR logger1 - CheckOrCreate函数在重试后失败,Exception of type 'System.Net.Http.HttpRequestException' was thrown.,   at Resillience.ResillienceHttpClient.<>c__DisplayClass8_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 105
+--- End of stack trace from previous location where exception was thrown ---
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 53
