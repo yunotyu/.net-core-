@@ -107,5 +107,20 @@ namespace User.Api.Controllers
             }
             return user.Id;
         }
+        public async Task<IActionResult> GetUserTags()
+        {
+            return new JsonResult(_userContext.UserTag.Where(u=>u.UserId==UserIdentity.UserId).ToList());
+        }
+
+        public async Task<IActionResult> Search(string phone)
+        {
+
+        }
+        public async Task<IActionResult> UpdateUserTags()
+        {
+
+        }
     }
+
+        
 }
