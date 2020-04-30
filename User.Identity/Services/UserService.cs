@@ -19,23 +19,31 @@ namespace User.Identity.Services
         /// </summary>
         private readonly string _userServiceUrl;
 
+        //存储全部User服务实例的全部地址
+        private readonly List<string> _userUrls;
     
 
         public  UserService(Resillience.IHttpClient client,IDnsQuery dnsQuery)
         {
             _client = client;
             _logger = Startup.logger;
+            _userUrls = new List<string>();
             try
             {
                 //因为是查询consul的某个服务的服务实例，根据consul文档格式为：服务名.service.consul
                 //所以第一个参数是：service.consul
                 //第二参数是要查询的服务名
                 var services= dnsQuery.ResolveServiceAsync("service.consul", "user").Result;
-                //返回查询到user服务下的第1个服务实例的ip和端口,给这个identity sever4去进行验证使用
-                var host = services.First().AddressList.First();
-                var port = services.First().Port;
+                foreach(var service in services)
+                {
+                    //返回查询到user服务下的第1个服务实例的ip和端口,给这个identity sever4去进行验证使用
+                    var host = service.AddressList.First();
+                    var port = service.Port;
+                    var url = $"http://{host}:{port}";
+                    //存储全部能用的user服务的实例地址
+                    _userUrls.Add(url);
+                }
                 
-                _userServiceUrl = $"http://{host}:{port}";
             }
             catch (Exception e)
             {
@@ -50,18 +58,17 @@ namespace User.Identity.Services
             //var content = new FormUrlEncodedContent(form);
             try
             {
-                var response = await _client.PostAsync(HttpMethod.Post, form, _userServiceUrl + "/api/users/check-or-create");
-
+                var response = await _client.PostAsync(HttpMethod.Post, form, _userUrls[0] + "/api/users/check-or-create");
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    var userId = await response.Content.ReadAsStringAsync();
-                    int.TryParse(userId, out int intUserId);
-                    return intUserId;
+                        var userId = await response.Content.ReadAsStringAsync();
+                        int.TryParse(userId, out int intUserId);
+                        return intUserId;
                 }
             }
             catch (Exception ex)
             {
-                _logger.Error("CheckOrCreate函数在重试后失败," + ex.Message +","+ ex.StackTrace);
+                _logger.Error("CheckOrCreate函数在重试后失败," + ex.Message + "," + ex.StackTrace);
                 throw ex;
             }
             //如果不成功，返回id为0

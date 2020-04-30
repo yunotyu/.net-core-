@@ -4882,6 +4882,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "DnsClient": "1.3.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.0",

@@ -57,14 +57,13 @@ namespace User.Identity
             //注入自定义HttpClient对象的工厂类
             services.AddSingleton(typeof(ResillienceClientFactory), sp =>
              {
-                
                  IHttpContextAccessor contextAccessor = sp.GetRequiredService<IHttpContextAccessor>();
                 
                  //这些可以配置在配置文件里
                  //重试次数
-                 int retryCount = 5;
+                 int retryCount = 3;
                  //允许重试多少次,如果超过这个次数，就熔断
-                 int exceptionCountAllowedBeforeBreaking = 5;
+                 int exceptionCountAllowedBeforeBreaking = 3;
 
                  return new ResillienceClientFactory(logger, retryCount, exceptionCountAllowedBeforeBreaking, contextAccessor);
 

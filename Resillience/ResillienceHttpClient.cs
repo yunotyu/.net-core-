@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using DnsClient;
 
 namespace Resillience
 {
@@ -25,19 +26,20 @@ namespace Resillience
         private readonly ILog _logger;
 
         //根据某个URL，创建对象的policy
-        private readonly Func<string, IEnumerable<Policy>> _policyCreator;
+        private readonly Func<string, IEnumerable<IAsyncPolicy>> _policyCreator;
 
         //打包后的policy组合放入一个字典里
-        private readonly ConcurrentDictionary<string, PolicyWrap> _policyWrapsDic;
+        private readonly ConcurrentDictionary<string, AsyncPolicyWrap> _policyWrapsDic;
 
         //需要安装Microsoft.AspNetCore.Http
         private IHttpContextAccessor _httpContextAccessor;
 
-        public ResillienceHttpClient(ILog logger , Func<string,IEnumerable<Policy>> policyCreator, IHttpContextAccessor httpContextAccessor)
+
+        public ResillienceHttpClient(ILog logger , Func<string,IEnumerable<IAsyncPolicy>> policyCreator, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             //组合策略PolicyWrap
-            _policyWrapsDic = new ConcurrentDictionary<string, PolicyWrap>();
+            _policyWrapsDic = new ConcurrentDictionary<string, AsyncPolicyWrap>();
             _policyCreator = policyCreator;
             _httpContextAccessor = httpContextAccessor;
             _httpClient = new HttpClient();
@@ -45,9 +47,10 @@ namespace Resillience
 
         public Task<HttpResponseMessage> PostAsync(HttpMethod method, Dictionary<string, string> form, string url, string authorizationToken, string requestId = null, string authorizationMethod = "Bearer")
         {
-            Func<HttpRequestMessage> func = () => CeateHttpRequestMessage(method,url,form);
-            //发送Http post请求, default(T)某个类型时，会产生默认值，例如 int类型为0，自定义类型为null
-            return DoPostAsync(method, url, func, authorizationToken, requestId, authorizationMethod);
+             Func<HttpRequestMessage> func = () => CeateHttpRequestMessage(method, url, form);
+                //发送Http post请求, default(T)某个类型时，会产生默认值，例如 int类型为0，自定义类型为null
+             return DoPostAsync(method, url, func, authorizationToken, requestId, authorizationMethod);
+        
         }
 
         public Task<HttpResponseMessage> PostAsync<T>(HttpMethod method,  T item, string url, string authorizationToken, string requestId = null, string authorizationMethod = "Bearer")
@@ -74,18 +77,17 @@ namespace Resillience
             {
                 throw new ArgumentException("not put or post method");
             }
-
-            //注意HttpRequestMessage要每次发送请求都是不一样的对象，不能发送多个请求采用一样的对象
-            //所以要定义在这个函数里，每次重试发送请求都是不一样的对象
-            HttpRequestMessage requestMessage = func();
-
             //获取一部分URL
             var baseUrl = GetOriginFromUri(url);
             
             //将要发送请求的代码传递给这个函数，这个函数会执行对应的代码
             //并使用上面组合策略对这些代码进行监控，如果发生对应的异常，就会使用策略
-            return HttpInvoker<HttpResponseMessage>(baseUrl,  async(context) =>
+            return HttpInvoker<HttpResponseMessage>(baseUrl,  async() =>
             {
+                //注意HttpRequestMessage要每次发送请求都是不一样的对象，不能发送多个请求采用一样的对象
+                //所以要定义在这个函数里，每次重试发送请求都是不一样的对象
+                HttpRequestMessage requestMessage = func();
+
                 //下面都是HTTP请求内容的设置
                 SetAuthorizationHeader(requestMessage);
                 if (authorizationToken != null)
@@ -102,6 +104,7 @@ namespace Resillience
                 {
                     throw new HttpRequestException();
                 }
+           
                 return response;
             });
         }
@@ -145,19 +148,20 @@ namespace Resillience
         /// <param name="url"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        private  Task<T> HttpInvoker<T>(string url, Func<Context,Task<T>> action)
+        private  Task<T> HttpInvoker<T>(string url, Func<Task<T>> action)
         {
             var normalUrl = NormalizeOrigin(url);
-            if(!_policyWrapsDic.TryGetValue(normalUrl, out PolicyWrap policyWrap))
+            if(!_policyWrapsDic.TryGetValue(normalUrl, out AsyncPolicyWrap policyWrap))
             {
                 //将多个Policy打包成组合策略
                 //这里的normalUrl的作用是，给每个identity server4要访问的URL单独一个组合策略，然后放到字典里
-                policyWrap = Policy.Wrap(_policyCreator(normalUrl).ToArray());
+                policyWrap = Policy.WrapAsync(_policyCreator(normalUrl).ToArray());
                 _policyWrapsDic.TryAdd(normalUrl, policyWrap);
             }
             //在执行action这个委托的函数时，使用上面的组合策略去监控这个代码执行过程
             //new Context(normalUrl) 给每个策略的上下文使用一个key，从而能分别出来
-            return policyWrap.Execute(action, new Context(normalUrl));
+
+            return policyWrap.ExecuteAsync(action);
         }
 
         private string NormalizeOrigin(string url)

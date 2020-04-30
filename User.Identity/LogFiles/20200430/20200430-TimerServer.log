@@ -1,0 +1,76 @@
+﻿
+[Header]
+2020-04-30 16:30:41,720 [5] WARN  logger1 - 第1次重试of AsyncRetryPolicy-2413388bdue to System.Net.Http.HttpRequestException: Exception of type 'System.Net.Http.HttpRequestException' was thrown.
+   at Resillience.ResillienceHttpClient.<>c__DisplayClass9_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.<>c__DisplayClass8_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 25
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+2020-04-30 16:30:44,234 [15] WARN  logger1 - 第2次重试of AsyncRetryPolicy-2413388bdue to System.Net.Http.HttpRequestException: Exception of type 'System.Net.Http.HttpRequestException' was thrown.
+   at Resillience.ResillienceHttpClient.<>c__DisplayClass9_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.<>c__DisplayClass8_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 25
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+2020-04-30 16:30:48,570 [14] WARN  logger1 - 熔断器打开
+2020-04-30 16:30:48,724 [14] WARN  logger1 - 第3次重试of AsyncRetryPolicy-2413388bdue to System.Net.Http.HttpRequestException: Exception of type 'System.Net.Http.HttpRequestException' was thrown.
+   at Resillience.ResillienceHttpClient.<>c__DisplayClass9_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.<>c__DisplayClass8_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 25
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+2020-04-30 16:30:56,726 [7] WARN  logger1 - 熔断时间到
+2020-04-30 16:30:57,054 [14] WARN  logger1 - 熔断器打开
+2020-04-30 16:30:57,394 [14] ERROR logger1 - CheckOrCreate函数在重试后失败,Exception of type 'System.Net.Http.HttpRequestException' was thrown.,   at Resillience.ResillienceHttpClient.<>c__DisplayClass9_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.<>c__DisplayClass8_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 25
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.ImplementationAsync[TResult](Func`3 func, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, IAsyncPolicy outerPolicy, IAsyncPolicy innerPolicy)
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 61
+2020-04-30 16:31:10,269 [6] WARN  logger1 - 熔断时间到
+2020-04-30 16:31:10,627 [15] WARN  logger1 - 熔断器打开
+2020-04-30 16:31:10,772 [15] WARN  logger1 - 第1次重试of AsyncRetryPolicy-2413388bdue to System.Net.Http.HttpRequestException: Exception of type 'System.Net.Http.HttpRequestException' was thrown.
+   at Resillience.ResillienceHttpClient.<>c__DisplayClass9_0.<<DoPostAsync>b__0>d.MoveNext() in C:\Users\admin\source\repos\User.Api\Resillience\ResillienceHttpClient.cs:line 113
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.<>c__DisplayClass8_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 25
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+2020-04-30 16:31:12,944 [12] ERROR logger1 - CheckOrCreate函数在重试后失败,The circuit is now open and is not allowing calls.,   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute() in C:\projects\polly\src\Polly\CircuitBreaker\CircuitStateController.cs:line 156
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerEngine.cs:line 21
+   at Polly.CircuitBreaker.AsyncCircuitBreakerPolicy.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext) in C:\projects\polly\src\Polly\CircuitBreaker\AsyncCircuitBreakerPolicy.cs:line 50
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.<>c__DisplayClass3_0`1.<<ImplementationAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Polly.Wrap.AsyncPolicyWrapEngine.ImplementationAsync[TResult](Func`3 func, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, IAsyncPolicy outerPolicy, IAsyncPolicy innerPolicy)
+   at Polly.AsyncPolicy.ExecuteAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 61

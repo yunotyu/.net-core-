@@ -97,7 +97,7 @@ namespace User.Api.Controllers
         [HttpPost]
         public async Task<int> CheckOrCreateUser([FromForm]string phone)
         {
-            throw new Exception("测试错误");
+            //throw new Exception("熔断器错误");
             var user = await _userContext.AppUser.SingleOrDefaultAsync(u => u.Phone == phone);
             //TODO:要对手机号码进行验证
             if (user == null)
