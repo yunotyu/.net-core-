@@ -1,0 +1,14 @@
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Contract.Api.deps.json
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Contract.Api.runtimeconfig.json
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Contract.Api.runtimeconfig.dev.json
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Contract.Api.dll
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Contract.Api.pdb
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.RazorAssemblyInfo.cache
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.RazorAssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.AssemblyInfo.cs
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.RazorTargetAssemblyInfo.cache
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.dll
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.pdb
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.csprojAssemblyReference.cache

@@ -107,18 +107,52 @@ namespace User.Api.Controllers
             }
             return user.Id;
         }
+
+
+        /// <summary>
+        /// 获取用户标签
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("tags")]
         public async Task<IActionResult> GetUserTags()
         {
             return new JsonResult(_userContext.UserTag.Where(u=>u.UserId==UserIdentity.UserId).ToList());
         }
 
+        /// <summary>
+        /// 根据手机号查询用户资料
+        /// </summary>
+        /// <param name="phone"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("search")]
         public async Task<IActionResult> Search(string phone)
         {
-
+           return Ok( await _userContext.AppUser.Include(u => u.Properties).SingleOrDefaultAsync(u=>u.Phone==phone));
         }
-        public async Task<IActionResult> UpdateUserTags()
+
+        /// <summary>
+        /// 更新用户标签
+        /// </summary>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("update/tags")]
+        public async Task<IActionResult> UpdateUserTags(List<string> tags)
         {
 
+                var userTags = await _userContext.UserTag.Where(u => u.UserId == UserIdentity.UserId).ToListAsync();
+                //Except比较两个序列的每一个值，然后得到不到的值的集合
+                var newTags = tags.Except(userTags.Select(t => t.Tag));
+                //使用AddRangeAsync一次插入多条数据
+                await _userContext.AddRangeAsync(newTags.Select(tag => new UserTag
+                {
+                    UserId = UserIdentity.UserId,
+                    Tag = tag
+                }));
+
+            await _userContext.SaveChangesAsync();
+            return Ok();
         }
     }
 

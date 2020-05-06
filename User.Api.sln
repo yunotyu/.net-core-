@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Api01", "User.Api01\Us
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{D41629E0-DE7A-4294-A02D-4B94516C845A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resillience", "Resillience\Resillience.csproj", "{4ABCACDC-1080-440C-A21C-F2BC046B1426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resillience", "Resillience\Resillience.csproj", "{4ABCACDC-1080-440C-A21C-F2BC046B1426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract.Api", "Contract.Api\Contract.Api.csproj", "{34E5E783-A606-4CC6-9403-AAFA59247260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ABCACDC-1080-440C-A21C-F2BC046B1426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E5E783-A606-4CC6-9403-AAFA59247260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E5E783-A606-4CC6-9403-AAFA59247260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E5E783-A606-4CC6-9403-AAFA59247260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E5E783-A606-4CC6-9403-AAFA59247260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
