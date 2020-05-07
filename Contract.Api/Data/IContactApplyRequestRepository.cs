@@ -14,20 +14,20 @@ namespace Contract.Api.Data
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        Task<bool> AddRequestAsync(ContactApplyRequest request, CancellationToken cancellationToken);
+        Task<bool> AddRequestAsync(ContactApplyRequest request, CancellationToken cancellationToken= default(CancellationToken));
 
         /// <summary>
         /// 通过好友请求 
         /// </summary>
         /// <param name="applierId"></param>
         /// <returns></returns>
-        Task<bool> ApprovalAsync(int applierId,CancellationToken cancellationToken);
+        Task<bool> ApprovalAsync(int userId, int applierId,CancellationToken cancellationToken= default(CancellationToken));
 
         /// <summary>
         /// 获取好友申请列表
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        Task<List<ContactApplyRequest>> GetRequestListAsync(int userId, CancellationToken cancellationToken);
+        Task<List<ContactApplyRequest>> GetRequestListAsync(int userId, CancellationToken cancellationToken= default(CancellationToken));
     }
 }

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Contract.Api.Models
 {
+    /// <summary>
+    /// 发送好友请求的用户的信息
+    /// </summary>
     public class ContactApplyRequest
     {
 
@@ -47,5 +50,10 @@ namespace Contract.Api.Models
         /// 处理时间
         /// </summary>
         public DateTime HandledTime { get; set; }
+
+        /// <summary>
+        /// 发送好友申请时间
+        /// </summary>
+        public DateTime ApplyTime { get; set; }
     }
 }

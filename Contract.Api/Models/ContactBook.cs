@@ -7,6 +7,11 @@ namespace Contract.Api.Models
 {
     public class ContactBook
     {
+        public ContactBook()
+        {
+            Contacts = new List<Contact>();
+        }
+
         public int UserId { get; set; }
 
         /// <summary>

@@ -7,6 +7,11 @@ namespace Contract.Api.Models
 {
     public class Contact
     {
+        public Contact()
+        {
+            Tags = new List<string>();
+        }
+
         public int UserId { get; set; }
 
         /// <summary>
