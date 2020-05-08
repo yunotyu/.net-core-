@@ -95,7 +95,7 @@ namespace User.Api.Controllers
         /// <returns></returns>
         [Route("check-or-create")]
         [HttpPost]
-        public async Task<int> CheckOrCreateUser([FromForm]string phone)
+        public async Task<IActionResult> CheckOrCreateUser([FromForm]string phone)
         {
             //throw new Exception("熔断器错误");
             var user = await _userContext.AppUser.SingleOrDefaultAsync(u => u.Phone == phone);
@@ -105,7 +105,13 @@ namespace User.Api.Controllers
                 _userContext.AppUser.Add(new AppUser { Phone = phone });
                 _userContext.SaveChanges();
             }
-            return user.Id;
+            return Ok(new {
+                user.Name,
+                user.Id,
+                user.Avatar,
+                user.Title,
+                user.Company
+            });
         }
 
 

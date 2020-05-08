@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using User.Identity.Entities;
+using Newtonsoft.Json;
 
 namespace User.Identity.Services
 {
@@ -51,7 +53,7 @@ namespace User.Identity.Services
             }
         }
 
-        public async Task<int> CheckOrCreate(string phone)
+        public async Task<UserInfo> CheckOrCreate(string phone)
         {
             var form = new Dictionary<string, string> { { "phone", phone } };
             //使用x-www-form-urlencoded在postman提交数据
@@ -61,9 +63,13 @@ namespace User.Identity.Services
                 var response = await _client.PostAsync(HttpMethod.Post, form, _userUrls[0] + "/api/users/check-or-create");
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                        var userId = await response.Content.ReadAsStringAsync();
-                        int.TryParse(userId, out int intUserId);
-                        return intUserId;
+                    var userStr = await response.Content.ReadAsStringAsync();
+                    var userInfo= JsonConvert.DeserializeObject<UserInfo>(userStr);
+                    if (userInfo != null)
+                    {
+                        return userInfo;
+                    }
+                    return null;
                 }
             }
             catch (Exception ex)
@@ -72,7 +78,7 @@ namespace User.Identity.Services
                 throw ex;
             }
             //如果不成功，返回id为0
-            return 0;
+            return null;
         }
     }
 }

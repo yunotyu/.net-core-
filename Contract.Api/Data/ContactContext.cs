@@ -19,6 +19,11 @@ namespace Contract.Api.Data
         //获取json配置文件的类
         private AppSetting _appSetting;
 
+        public ContactContext()
+        {
+
+        }
+
         //因为在Startup使用了services.Configure<AppSetting>(_configuration.GetSection("AppSettings"))添加配置到IOption里;
         //所以IOptionsSnapshot来获取这个对象，IOptionsSnapshot是会随着配置文件的改变而实时改变的
         public ContactContext(IOptionsSnapshot<AppSetting> settings)

@@ -5,7 +5,7 @@
       //在访问上面这个服务时，需要token
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "finbook",
-        "AllowedScopes": []
+        "AllowedScopes": [ "gateway_api" ]
       },
       //配置下游服务,实际访问的控制器方法
       "DownstreamPathTemplate": "/api/users{action}",
@@ -30,20 +30,66 @@
       //这里Ocelot只是负责转发请求到Ocelot
       "UseServiceDiscovery": true
     },
+    //配置contact
     {
+      //在访问上面这个服务时，需要token
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "finbook",
+        "AllowedScopes": ["contact_api"]
+      },
       //配置下游服务,实际访问的控制器方法
-      "DownstreamPathTemplate": "api/contacts{action}",
+      "DownstreamPathTemplate": "/api/contacts{action}",
       "DownstreamScheme": "http",
       //启用ocelot的负载均衡功能
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       },
-      "UpstreamHttpMethod": [ "Get","Put","Post" ],
-     
+      "UpstreamHttpMethod": [ "Get", "Put", "Post" ],
+
       //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
       "UpstreamPathTemplate": "/contacts{action}",
       //给下面的consul服务的名字
       "ServiceName": "contacts",
+      //使用下面的consul作为服务发现,注册服务也是在Consul
+      //这里Ocelot只是负责转发请求到Ocelot
+      "UseServiceDiscovery": true
+    },
+    //配置identity server4的请求转发
+    {
+      //配置下游服务,实际访问identity server4的端点
+      //这是实际上访问的是http://localhost:5000/.well-known/openid-configuration
+      "DownstreamPathTemplate": "/.well-known{url}",
+      "DownstreamScheme": "http",
+      //启用ocelot的负载均衡功能
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "UpstreamHttpMethod": [ "Get" ],
+
+      //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
+      "UpstreamPathTemplate": "/.well-known{url}",
+      //下面的consul服务的名字
+      "ServiceName": "identity",
+      //使用下面的consul作为服务发现,注册服务也是在Consul
+      //这里Ocelot只是负责转发请求到Ocelot
+      "UseServiceDiscovery": true
+    },
+    //配置identity server4的请求转发
+    {
+      //配置下游服务,实际访问identity server4的端点
+      //这是实际上访问的是http://localhost:5000/connect/token这样的地址
+      "DownstreamPathTemplate": "/connect{url}",
+      "DownstreamScheme": "http",
+      //启用ocelot的负载均衡功能
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "UpstreamHttpMethod": [ "Post" ],
+
+      //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
+      "UpstreamPathTemplate": "/connect{url}",
+      //下面的consul服务的名字
+      "ServiceName": "identity",
       //使用下面的consul作为服务发现,注册服务也是在Consul
       //这里Ocelot只是负责转发请求到Ocelot
       "UseServiceDiscovery": true

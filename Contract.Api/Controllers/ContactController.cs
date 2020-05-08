@@ -34,7 +34,13 @@ namespace Contract.Api.Controllers
         [Route("")]
         public async Task<IActionResult> Get(int userId)
         {
-            return Ok( await _contactRepository.GetContactsAsync(userId));
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            var data = await _contactRepository.GetContactsAsync(userId, tokenSource.Token);
+            if (data == null)
+            {
+                return Ok("");
+            }
+            return Ok(data );
         }
 
         /// <summary>
@@ -74,8 +80,8 @@ namespace Contract.Api.Controllers
         [Route("apply-requests")]
         public async Task<IActionResult> AddApplyRequest(int userId)
         {
-           BaseUserInfo userInfo= _userService.GetBaseUserinfo(userId);
-            if (userInfo == null)
+           //BaseUserInfo userInfo= _userService.GetBaseUserinfo(userId);
+            if (UserIdentity == null)
             {
                 throw new Exception("用户参数错误");
             }
@@ -83,10 +89,10 @@ namespace Contract.Api.Controllers
             {
                 UserId=userId,
                 ApplierId=UserIdentity.UserId,
-                Name=userInfo.Name,
-                Company=userInfo.Company,
-                Title=userInfo.Title,
-                Avatar=userInfo.Avatar,
+                Name= UserIdentity.Name,
+                Company= UserIdentity.Company,
+                Title= UserIdentity.Title,
+                Avatar= UserIdentity.Avatar,
                 ApplyTime=DateTime.Now
             });
 

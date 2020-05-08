@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using User.Identity.Entities;
 
 namespace User.Identity.Services
 {
@@ -11,6 +12,6 @@ namespace User.Identity.Services
         /// 根据手机号检查用户是否存在，不存在就创建
         /// </summary>
         /// <param name="phone">手机号</param>
-        Task<int> CheckOrCreate(string phone);
+        Task<UserInfo> CheckOrCreate(string phone);
     }
 }

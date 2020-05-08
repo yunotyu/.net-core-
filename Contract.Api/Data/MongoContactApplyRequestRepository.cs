@@ -12,7 +12,7 @@ namespace Contract.Api.Data
     {
         private ContactContext _contactContext;
 
-        public MongoContactApplyRequestRepository(ContactContext contactContext, CancellationToken cancellationToken)
+        public MongoContactApplyRequestRepository(ContactContext contactContext)
         {
             _contactContext = contactContext;
         }

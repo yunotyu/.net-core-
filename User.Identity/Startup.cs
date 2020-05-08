@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using DnsClient;
+using IdentityServer4.Services;
 using log4net;
 using log4net.Config;
 using log4net.Core;
@@ -38,6 +39,9 @@ namespace User.Identity
                     .AddInMemoryClients(Config.GetClients())
                     .AddInMemoryIdentityResources(Config.GetIdentityResources())
                     .AddInMemoryApiResources(Config.GetApiResources());
+
+            //替换默认的IProfileService，返回自己定义的claim
+            services.AddTransient<IProfileService, ProfileService>();
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthCodeService, TestAuthCodeService>();
@@ -110,7 +114,7 @@ namespace User.Identity
                 //下面的内容可以放在一个配置文件里，然后转换json为对象
                 _consulService = new ConsulService();
                 _consulService.Id = "identity01";
-                _consulService.Name = "identity01";
+                _consulService.Name = "identity";
                 _consulService.Tags = new List<string> { "identity01" };
                 _consulService.Address = "127.0.0.1";
                 _consulService.Port = 5000;
@@ -119,7 +123,7 @@ namespace User.Identity
                 {
                     new ConsulServiceCheck()
                     {
-                        Name= "identity01",
+                        Name= "identitycheck",
                         Http= "http://127.0.0.1:5000/health",
                         Tls_Skip_Verify= true,
                         Method= "GET",

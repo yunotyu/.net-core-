@@ -60,7 +60,11 @@ namespace Contract.Api.Data
         {
             //获取对应用户的通讯录
            var contactBook= await(await _contactContext.ContactBooks.FindAsync(c => c.UserId == userId)).FirstOrDefaultAsync();
-           return contactBook.Contacts;
+            if (contactBook == null)
+            {
+                return null;
+            }
+            return contactBook.Contacts;
         }
 
        
