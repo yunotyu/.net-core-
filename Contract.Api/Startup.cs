@@ -10,11 +10,19 @@ using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using Contract.Api.Service;
 using Contract.Api.Data;
+using DnsClient;
+using System.Net;
+using Contract.Api.Infrastructure;
+using log4net;
+using log4net.Repository;
+using log4net.Config;
+using System.IO;
 
 namespace Contract.Api
 {
     public class Startup
     {
+        public static ILog logger;
         private IConfiguration _configuration;
         private ConsulService _consulService;
         //服务注册后返回的状态码
@@ -27,7 +35,16 @@ namespace Contract.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            ILoggerRepository _loggerRepository;
+            _loggerRepository = LogManager.CreateRepository("NETCoreRepository");
+
+            //当配置文件发生修改时，重新加载文件
+            XmlConfigurator.ConfigureAndWatch(_loggerRepository, new FileInfo("Configs/log4net.config"));
+
+            //GetLogger第一个参数是我们在Startup定义的LoggerRepository名字，
+            //第二参数是我们在配置文件定义的logger节点的logger对象，可以定义多个logger（日志打印对象）
+            logger = LogManager.GetLogger(_loggerRepository.Name, "logger1");
+
             services.AddScoped<IContactApplyRequestRepository, MongoContactApplyRequestRepository>();
             services.AddScoped<IContactRepository, MongoContactRepository>();
             services.AddScoped<IUserService, UserService>();
@@ -39,14 +56,46 @@ namespace Contract.Api
             //清除默认显示的claimtype，采用更加简洁的类型
             System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();
             //这里加认证框架，只是为了拿到token里的claim信息，因为认证已经在ocelot实现了
-            //认证框架会将jwt转换为正常的对象,所以可以拿到claim
+            //认证框架会将jwt转换为正常的对象,所以可以拿到claim,这些claim是查询到用户信息
+            //放入UserIdentity类里，以供使用
             services.AddAuthentication(Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
                     {
                         options.RequireHttpsMetadata = false;
                         options.Authority = "http://localhost";
                         options.Audience = "contact_api";
+                        //只有SaveToken才能在这个项目的代码里获取到token的值
+                        options.SaveToken = true;
                     });
+
+
+            //注入自定义HttpClient对象的工厂类
+            services.AddSingleton(typeof(ResillienceClientFactory), sp =>
+            {
+                IHttpContextAccessor contextAccessor = sp.GetRequiredService<IHttpContextAccessor>();
+
+                //这些可以配置在配置文件里
+                //重试次数
+                int retryCount = 3;
+                //允许重试多少次,如果超过这个次数，就熔断
+                int exceptionCountAllowedBeforeBreaking = 3;
+
+                return new ResillienceClientFactory(logger, retryCount, exceptionCountAllowedBeforeBreaking, contextAccessor);
+
+            });
+
+            //注入自定义的HttpClient对象
+            services.AddSingleton<Resillience.IHttpClient>(serviceProvider =>
+            {
+                return serviceProvider.GetRequiredService<ResillienceClientFactory>().GetResillienceHttpClient();
+            });
+
+            //添加DSN解析对象的注入
+            services.AddSingleton<IDnsQuery>(p =>
+            {
+                return new LookupClient(IPAddress.Parse("127.0.0.1"), 8600);
+            });
+
             services.AddMvc();
         }
 

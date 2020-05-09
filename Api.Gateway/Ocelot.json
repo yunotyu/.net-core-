@@ -5,7 +5,7 @@
       //在访问上面这个服务时，需要token
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "finbook",
-        "AllowedScopes": [ "gateway_api" ]
+        "AllowedScopes": [ "gateway_api","user_api" ]
       },
       //配置下游服务,实际访问的控制器方法
       "DownstreamPathTemplate": "/api/users{action}",
@@ -14,7 +14,7 @@
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       },
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Patch" ],
       //使用Consul时，这个可以不要
       //"DownstreamHostAndPorts": [
       //  {
@@ -24,8 +24,8 @@
       //],
       //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
       "UpstreamPathTemplate": "/users{action}",
-      //给下面的consul服务的名字
-      "ServiceName": "users",
+      //给下面的consul服务的名字,这里的名字要和consul的服务名对上，不是服务id
+      "ServiceName": "user",
       //使用下面的consul作为服务发现,注册服务也是在Consul
       //这里Ocelot只是负责转发请求到Ocelot
       "UseServiceDiscovery": true

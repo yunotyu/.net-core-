@@ -32,6 +32,7 @@ namespace User.Identity
                 AllowedScopes = new List<string>
                 {
                     "gateway_api",
+                    "user_api",
                     "contact_api",
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.OpenId,
@@ -56,6 +57,7 @@ namespace User.Identity
             return new List<ApiResource>
             {
                 new ApiResource("gateway_api"),
+                new ApiResource("user_api"),
                 new ApiResource("contact_api")
             };
         }

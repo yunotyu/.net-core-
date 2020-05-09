@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -11,6 +12,7 @@ using log4net;
 using log4net.Config;
 using log4net.Core;
 using log4net.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -84,7 +86,7 @@ namespace User.Identity
             {
                 return new LookupClient(IPAddress.Parse("127.0.0.1"), 8600);
             });
-
+        
             services.AddMvc();
         }
 

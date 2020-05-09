@@ -189,5 +189,56 @@ namespace Resillience
                 requestMessage.Headers.Add("Authorization", new List<string>() { authorizationHeader });
             }
         }
+
+        /// <summary>
+        /// Get请求
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="url"></param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task<HttpResponseMessage> GetAsync(HttpMethod method, string url, int userId, string authorizationToken=null, string authorizationMethod = "Bearer")
+        {
+            return await DoGetAsync(method, url, userId, authorizationToken, authorizationMethod);
+        }
+
+
+        public Task<HttpResponseMessage> DoGetAsync(HttpMethod method, string url, int userId, string authorizationToken,string authorizationMethod = "Bearer")
+        {
+            if (method != HttpMethod.Get )
+            {
+                throw new ArgumentException("not get method");
+            }
+            //最终访问的URL
+            var finallyUrl = url + "/" + userId;
+
+            //获取一部分URL
+            var baseUrl = GetOriginFromUri(url);
+
+            //将要发送请求的代码传递给这个函数，这个函数会执行对应的代码
+            //并使用上面组合策略对这些代码进行监控，如果发生对应的异常，就会使用策略
+            return HttpInvoker<HttpResponseMessage>(baseUrl, async () =>
+            {
+                //注意HttpRequestMessage要每次发送请求都是不一样的对象，不能发送多个请求采用一样的对象
+                //所以要定义在这个函数里，每次重试发送请求都是不一样的对象
+                HttpRequestMessage requestMessage = new HttpRequestMessage(method,finallyUrl);
+
+                //下面都是HTTP请求内容的设置
+                SetAuthorizationHeader(requestMessage);
+                if (authorizationToken != null)
+                {
+                    requestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue(authorizationMethod, authorizationToken);
+                }
+           
+                var response = await _httpClient.SendAsync(requestMessage);
+                //抛出异常，让策略Policy进行处理
+                if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    throw new HttpRequestException();
+                }
+
+                return response;
+            });
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Contract.Api.Data
         /// <param name="baseUser"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public async Task<bool> AddContactAsync(int userId,BaseUserInfo applierInfo, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<bool> AddContactAsync(int userId, UserIdentity applierInfo, CancellationToken cancellationToken = default(CancellationToken))
         {
             //如果用户没有通讯录，先创建
             if((await _contactContext.ContactBooks.CountDocumentsAsync(c => c.UserId == userId)) == 0)
@@ -87,7 +87,7 @@ namespace Contract.Api.Data
             return result.MatchedCount == result.ModifiedCount;
         }
 
-        public async Task<bool> UpdateContactInfoAsync(BaseUserInfo userInfo, CancellationToken cancellationToken)
+        public async Task<bool> UpdateContactInfoAsync(UserIdentity userInfo, CancellationToken cancellationToken)
         {
             //如果某个用户修改了资料，这里找出他的所有好友，然后修改这些好友里的他的资料
             var allFriend = (await _contactContext.ContactBooks.FindAsync(u => u.UserId == userInfo.UserId)).ToList();

@@ -22,6 +22,7 @@ using User.Api.Filters;
 using MySql.Data;
 using User.Api.Entities;
 using System.Net.Http;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace User.Api
 {
@@ -90,7 +91,23 @@ namespace User.Api
             {
                 options.UseMySQL(Configuration.GetConnectionString("Mysql"));
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+
+            //这里加认证框架，只是为了拿到token里的claim信息，因为认证已经在ocelot实现了
+            //认证框架会将jwt转换为正常的对象,所以可以拿到claim,这些claim是查询到用户信息
+            //放入UserIdentity类里，以供使用
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddAuthentication("Bearer")
+                       .AddJwtBearer(options =>
+                       {
+                           options.Audience = "user_api";
+                           //这里的认证地址可以不用写identity server4的地址
+                           //因为认证已经在Ocelot项目里配置过了，所以Ocelot会去认证
+                           options.Authority = "http://localhost:5000";
+                           options.RequireHttpsMetadata = false;
+                       });
+
+            services.AddMvc(options=>options.Filters.Add(typeof(GlobalExceptionFilter))).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -132,6 +149,7 @@ namespace User.Api
             lifetime.ApplicationStarted.Register(RegisterService);
             lifetime.ApplicationStopped.Register(DelRegisterService);
 
+            app.UseAuthentication();
             app.UseMvc();
             InitUserData(app);
         }

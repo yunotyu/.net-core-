@@ -41,6 +41,30 @@ namespace User.Api.Controllers
             return Ok(user);
         }
 
+        /// <summary>
+        /// 获取某个用户的信息
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("userInfo/{id}")]
+        public async Task<IActionResult> GetUserInfo([FromRoute(Name ="id")]int userId)
+        {
+            //这里前面需要判断查找用户信息的哪个人是不是查找人的好友
+            var userInfo= await _userContext.AppUser.SingleOrDefaultAsync(u => u.Id == userId);
+            if (userInfo == null)
+            {
+                return NotFound();
+            }
+            return Ok(new
+            {
+                userInfo.Name,
+                userInfo.Id,
+                userInfo.Title,
+                userInfo.Company,
+                userInfo.Avatar
+            });
+        }
         
         /// <summary>
         /// 做负载均衡测试

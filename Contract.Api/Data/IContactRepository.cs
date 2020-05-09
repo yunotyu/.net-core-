@@ -15,7 +15,7 @@ namespace Contract.Api.Data
         /// </summary>
         /// <param name="userInfo"></param>
         /// <returns></returns>
-        Task<bool> UpdateContactInfoAsync(BaseUserInfo userInfo,CancellationToken cancellationToken = default(CancellationToken));
+        Task<bool> UpdateContactInfoAsync(UserIdentity userInfo,CancellationToken cancellationToken = default(CancellationToken));
         
         /// <summary>
         /// 添加联系人信息
@@ -23,7 +23,7 @@ namespace Contract.Api.Data
         /// <param name="baseUser"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        Task<bool> AddContactAsync(int userId, BaseUserInfo applierInfo, CancellationToken cancellationToken=default(CancellationToken));
+        Task<bool> AddContactAsync(int userId, UserIdentity applierInfo, CancellationToken cancellationToken=default(CancellationToken));
 
         /// <summary>
         /// 获取联系人列表

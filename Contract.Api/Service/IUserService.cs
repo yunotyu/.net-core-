@@ -13,6 +13,6 @@ namespace Contract.Api.Service
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        BaseUserInfo GetBaseUserinfo(int userId);
+        Task<UserIdentity> GetBaseUserinfo(int userId);
     }
 }

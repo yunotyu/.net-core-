@@ -18,5 +18,7 @@ namespace User.Api.Entities.Dtos
         /// 头像地址
         /// </summary>
         public string Avatar { get; set; }
+        public string Title { get; internal set; }
+        public string Company { get; internal set; }
     }
 }

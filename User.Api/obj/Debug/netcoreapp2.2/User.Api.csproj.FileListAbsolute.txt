@@ -12,3 +12,6 @@ C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\User.Api.p
 C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.dll
 C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.pdb
 C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\Resillience.pdb
+C:\Users\admin\source\repos\User.Api\User.Api\obj\Debug\netcoreapp2.2\User.Api.csproj.CopyComplete

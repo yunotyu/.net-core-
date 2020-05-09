@@ -14,5 +14,7 @@ namespace Resillience
         Task<HttpResponseMessage>PostAsync(HttpMethod method, Dictionary<string, string> form, string url, string authorizationToken=null, string requestId = null, string authorizationMethod = "Bearer");
 
         Task<HttpResponseMessage> PostAsync<T>(HttpMethod method, T item, string url, string authorizationToken = null, string requestId = null, string authorizationMethod = "Bearer");
+
+        Task<HttpResponseMessage> GetAsync(HttpMethod method, string url, int userId, string authorizationToken=null, string authorizationMethod = "Bearer");
     }
 }

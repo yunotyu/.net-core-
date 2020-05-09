@@ -12,3 +12,6 @@ C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contra
 C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.dll
 C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.pdb
 C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\Resillience.pdb
+C:\Users\admin\source\repos\User.Api\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.csproj.CopyComplete

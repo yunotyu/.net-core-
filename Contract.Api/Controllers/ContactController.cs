@@ -77,7 +77,7 @@ namespace Contract.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Route("apply-requests")]
+        [Route("apply-requests/{userId}")]
         public async Task<IActionResult> AddApplyRequest(int userId)
         {
            //BaseUserInfo userInfo= _userService.GetBaseUserinfo(userId);
@@ -120,9 +120,9 @@ namespace Contract.Api.Controllers
             }
 
             //申请人的信息
-            var applierMsg = _userService.GetBaseUserinfo(applierId);
+            var applierMsg =await _userService.GetBaseUserinfo(applierId);
             //当前用户的信息
-            var userMsg = _userService.GetBaseUserinfo(UserIdentity.UserId);
+            var userMsg = await _userService.GetBaseUserinfo(UserIdentity.UserId);
 
             //因为添加好友是双向的，各自的通讯录都有对方
             //往当前用户的MongoDB通讯录添加好友

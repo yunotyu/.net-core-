@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.DependencyInjection;
 using Ocelot.Provider.Consul;
+using Microsoft.IdentityModel.Logging;
 
 namespace Gateway.Api
 {
@@ -21,22 +22,25 @@ namespace Gateway.Api
             //设置这个认证的Schem的名字
             string authenticationProviderSchem = "finbook";
 
+            //展示PII的更多错误信息,调试时使用
+            IdentityModelEventSource.ShowPII = true;
+
             //在这里添加identity server4的认证，当要访问这个网关的某个下游服务时，需要使用identity server4提供的token
             //所以需要单独发请求先去获取identity server4提供的token，然后利用这个token来访问
             //需要在Ocelot的配置文件配置哪个下游服务需要认证
             services.AddAuthentication()
-                .AddIdentityServerAuthentication(authenticationProviderSchem,options=>
-                {
-                    //去哪个地址验证这个token是否正确
-                    options.Authority = "http://localhost:5000";
+                .AddIdentityServerAuthentication(authenticationProviderSchem, options =>
+                 {
+                    //去哪个地址验证这个token是否正确,注意这里不能写localhost，不然会出错
+                    options.Authority = "http://127.0.0.1:5000";
                     //来请求访问的token的api的名字
-                    options.ApiName = "gateway_api";
-                    options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;
+                    options.ApiName = "user_api";
+                     options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;
                     //来请求访问的token的秘钥
                     options.ApiSecret = "secret";
                     //可以不用HTTPS请求访问
                     options.RequireHttpsMetadata = false;
-                });
+                 });
 
 
             //Ocelot.DependencyInjection
