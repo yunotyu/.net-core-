@@ -8,6 +8,7 @@ using Contract.Api.Service;
 using Contract.Api.Dtos;
 using System.Threading;
 using Contract.Api.ViewMpdel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Contract.Api.Controllers
 {
@@ -73,7 +74,7 @@ namespace Contract.Api.Controllers
         }
 
         /// <summary>
-        /// 添加好友请求
+        /// 添加好友请求，userId是要添加的好友的Id
         /// </summary>
         /// <returns></returns>
         [HttpPost]
