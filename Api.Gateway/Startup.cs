@@ -32,7 +32,7 @@ namespace Gateway.Api
                 .AddIdentityServerAuthentication(authenticationProviderSchem, options =>
                  {
                     //去哪个地址验证这个token是否正确,注意这里不能写localhost，不然会出错
-                    options.Authority = "http://127.0.0.1:5000";
+                    options.Authority = "http://localhost:5000";
                     //来请求访问的token的api的名字
                     options.ApiName = "user_api";
                      options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;

@@ -62,7 +62,7 @@ namespace Contract.Api
                     .AddJwtBearer(options =>
                     {
                         options.RequireHttpsMetadata = false;
-                        options.Authority = "http://localhost";
+                        options.Authority = "http://127.0.0.1:5000";
                         options.Audience = "contact_api";
                         //只有SaveToken才能在这个项目的代码里获取到token的值
                         options.SaveToken = true;
