@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.JsonPatch;
 using User.Api.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,11 +17,13 @@ namespace User.Api.Controllers
 {
     [Route("api/users")]
     [ApiController]
+    //[Authorize]
     public class UsersController : BaseController
     {
         private UserContext _userContext;
 
-        public UsersController(UserContext userContext)
+        //注入IHttpContextAccessor，可以在构造函数里访问HttpContext对象
+        public UsersController(UserContext userContext, IHttpContextAccessor httpContextAccessor) :base(httpContextAccessor)
         {
             _userContext = userContext;
         }
@@ -32,8 +36,10 @@ namespace User.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+             //int UserId = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(c => c.Type == "sub").Value);
+
             //加上Include(u => u.Properties)才能获取到导航属性的值
-            var user= await _userContext.AppUser.AsNoTracking().Include(u => u.Properties).SingleOrDefaultAsync(u=>u.Id == UserIdentity.UserId);
+            var user = await _userContext.AppUser.AsNoTracking().Include(u => u.Properties).SingleOrDefaultAsync(u=>u.Id == UserIdentity.UserId);
             if (user == null)
             {
                 throw new UserOperationException($"用户不存在id：{UserIdentity.UserId}"); 
@@ -117,6 +123,7 @@ namespace User.Api.Controllers
         /// </summary>
         /// <param name="phone"></param>
         /// <returns></returns>
+        [AllowAnonymous]
         [Route("check-or-create")]
         [HttpPost]
         public async Task<IActionResult> CheckOrCreateUser([FromForm]string phone)

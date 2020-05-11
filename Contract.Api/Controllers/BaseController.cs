@@ -13,24 +13,20 @@ namespace Contract.Api.Controllers
     public class BaseController : ControllerBase
     {
         public UserIdentity UserIdentity {
-            get
-            {
-                var userIdentity = new UserIdentity()
-                {
-                    //返回认证框架里获取jwt的token后的claim信息
-                    UserId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "sub").Value),
-                    Name = User.Claims.FirstOrDefault(c => c.Type == "name").Value,
-                    Avatar= User.Claims.FirstOrDefault(c => c.Type == "avatar").Value,
-                    Title= User.Claims.FirstOrDefault(c => c.Type == "title").Value,
-                    Company= User.Claims.FirstOrDefault(c => c.Type == "company").Value
-                };
-                return userIdentity;
-            }
+            get;
         }
 
         public BaseController()
         {
-            
+            var userIdentity = new UserIdentity();
+            //返回认证框架里获取jwt的token后的claim信息
+            userIdentity.UserId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "sub").Value);
+            userIdentity.Name = User.Claims.FirstOrDefault(c => c.Type == "name").Value;
+            userIdentity.Avatar = User.Claims.FirstOrDefault(c => c.Type == "avatar").Value;
+            userIdentity.Title = User.Claims.FirstOrDefault(c => c.Type == "title").Value;
+            userIdentity.Company = User.Claims.FirstOrDefault(c => c.Type == "company").Value;
+                
+            UserIdentity = userIdentity;
         }
     }
 }

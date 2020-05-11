@@ -12,3 +12,17 @@ C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorTargetAssemblyInfo.cache
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.dll
 C:\Users\admin\source\repos\User.Api\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.pdb
+C:\Users\Administrator\Desktop\项目\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.deps.json
+C:\Users\Administrator\Desktop\项目\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.runtimeconfig.json
+C:\Users\Administrator\Desktop\项目\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\项目\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.dll
+C:\Users\Administrator\Desktop\项目\Api.Gateway\bin\Debug\netcoreapp2.2\Gateway.Api.pdb
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.dll
+C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.pdb

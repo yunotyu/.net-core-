@@ -61,6 +61,7 @@ namespace Contract.Api
             services.AddAuthentication(Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
                     {
+                        //options.MetadataAddress = "http://127.0.0.1:5000/.well-known/openid-configuration";
                         options.RequireHttpsMetadata = false;
                         options.Authority = "http://127.0.0.1:5000";
                         options.Audience = "contact_api";
@@ -68,6 +69,7 @@ namespace Contract.Api
                         options.SaveToken = true;
                     });
 
+            services.AddHttpContextAccessor();
 
             //注入自定义HttpClient对象的工厂类
             services.AddSingleton(typeof(ResillienceClientFactory), sp =>
@@ -97,6 +99,7 @@ namespace Contract.Api
             });
 
             services.AddMvc();
+
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
@@ -127,7 +130,7 @@ namespace Contract.Api
                 _consulService.Name = "contacts";
                 _consulService.Tags = new List<string> { "contact01" };
                 _consulService.Address = "127.0.0.1";
-                _consulService.Port = 8005;
+                _consulService.Port = 8008;
                 _consulService.Enable_Tag_Override = false;
                 _consulService.checks = new List<ConsulServiceCheck>
                 {

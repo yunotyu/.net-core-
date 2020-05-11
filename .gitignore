@@ -3,3 +3,14 @@ bin
 /Consul/consul.exe
 /README.md
 /User.Api/LogFiles/
+/Consul/data/checks
+/Consul/data/raft
+/Consul/data/serf
+/Consul/data/services
+/Consul/data/checkpoint-signature
+/Consul/data/node-id
+/Consul/obj/Debug
+/Consul/obj/Consul.csproj.nuget.cache
+/Consul/obj/Consul.csproj.nuget.g.props
+/Consul/obj/Consul.csproj.nuget.g.targets
+/Consul/obj/project.assets.json

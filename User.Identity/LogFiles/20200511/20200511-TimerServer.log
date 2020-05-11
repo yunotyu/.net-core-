@@ -1,0 +1,42 @@
+﻿
+[Header]
+2020-05-11 15:14:38,609 [10] ERROR logger1 - CheckOrCreate函数在重试后失败,Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index,   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 63
+2020-05-11 15:15:06,938 [10] ERROR logger1 - CheckOrCreate函数在重试后失败,Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index,   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 63
+2020-05-11 15:15:56,563 [10] ERROR logger1 - CheckOrCreate函数在重试后失败,Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index,   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 63
+
+[Header]
+2020-05-11 15:16:30,283 [7] ERROR logger1 - CheckOrCreate函数在重试后失败,Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index,   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 63
+2020-05-11 15:18:22,547 [6] ERROR logger1 - CheckOrCreate函数在重试后失败,Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index,   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 63
+
+[Header]
+2020-05-11 16:35:24,608 [9] ERROR logger1 - CheckOrCreate函数在重试后失败,Error converting value "未知内部错误" to type 'User.Identity.Entities.UserInfo'. Path '', line 1, position 8.,   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 67
+2020-05-11 16:37:41,335 [4] ERROR logger1 - CheckOrCreate函数在重试后失败,Error converting value "未知内部错误" to type 'User.Identity.Entities.UserInfo'. Path '', line 1, position 8.,   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 67
+2020-05-11 16:38:05,099 [4] ERROR logger1 - CheckOrCreate函数在重试后失败,Error converting value "未知内部错误" to type 'User.Identity.Entities.UserInfo'. Path '', line 1, position 8.,   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at User.Identity.Services.UserService.CheckOrCreate(String phone) in C:\Users\admin\source\repos\User.Api\User.Identity\Services\UserService.cs:line 67

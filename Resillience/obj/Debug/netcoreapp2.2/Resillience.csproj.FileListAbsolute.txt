@@ -7,3 +7,12 @@ C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resilli
 C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.dll
 C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.pdb
 C:\Users\admin\source\repos\User.Api\Resillience\obj\Debug\netcoreapp2.2\Resillience.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\项目\Resillience\bin\Debug\netcoreapp2.2\Resillience.deps.json
+C:\Users\Administrator\Desktop\项目\Resillience\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\Administrator\Desktop\项目\Resillience\bin\Debug\netcoreapp2.2\Resillience.pdb
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\Administrator\Desktop\项目\Resillience\obj\Debug\netcoreapp2.2\Resillience.pdb

@@ -15,8 +15,6 @@ namespace Gateway.Api
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             //设置这个认证的Schem的名字
@@ -32,14 +30,16 @@ namespace Gateway.Api
                 .AddIdentityServerAuthentication(authenticationProviderSchem, options =>
                  {
                     //去哪个地址验证这个token是否正确,注意这里不能写localhost，不然会出错
-                    options.Authority = "http://localhost:5000";
-                    //来请求访问的token的api的名字
-                    options.ApiName = "user_api";
+                    options.Authority = "http://127.0.0.1:5000";
+                     //identity server4的一个端点，可以设置为某个api资源的名字
+                     //然后携带某个token去访问/connect/introspect这个端点，确认该token是否有效
+                     options.ApiName = "gateway_api";
                      options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;
                     //来请求访问的token的秘钥
                     options.ApiSecret = "secret";
                     //可以不用HTTPS请求访问
                     options.RequireHttpsMetadata = false;
+                    //options.SaveToken = true;
                  });
 
 
