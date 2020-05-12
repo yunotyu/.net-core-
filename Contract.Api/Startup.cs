@@ -52,9 +52,10 @@ namespace Contract.Api
             //将对应的AppSetting去获取配置文件的值，然后注入容器
             //在控制器里可以使用IOption<AppSetting>来获取该值
             services.Configure<AppSetting>(_configuration.GetSection("AppSettings"));
-
+          
             //清除默认显示的claimtype，采用更加简洁的类型
-            System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();
+            System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+          
             //这里加认证框架，只是为了拿到token里的claim信息，因为认证已经在ocelot实现了
             //认证框架会将jwt转换为正常的对象,所以可以拿到claim,这些claim是查询到用户信息
             //放入UserIdentity类里，以供使用

@@ -33,12 +33,11 @@ namespace Contract.Api.Data
                 await _contactContext.ContactBooks.InsertOneAsync(new ContactBook() { UserId = userId });
             }
 
-
             //先找到当前用户，然后把这个好友的信息添加到MongoDB里该用户的记录里
             var filter = Builders<ContactBook>.Filter.Eq(c => c.UserId, userId);
             var update = Builders<ContactBook>.Update.AddToSet(c => c.Contacts, new Contact()
             {
-                UserId = applierInfo.UserId,
+                UserId = applierInfo.Id,
                 Avatar = applierInfo.Avatar,
                 Company= applierInfo.Company,
                 Name= applierInfo.Name,
@@ -80,17 +79,24 @@ namespace Contract.Api.Data
         {
             //c=>c.UserId
             //filter设置为选择用户ID和某个好友ID的筛选 
-            var filter = Builders<ContactBook>.Filter.And( Builders<ContactBook>.Filter.Eq("ContactBook.UserId", userId), Builders<ContactBook>.Filter.Eq("Contacts.UserId", friendId));
+            var filter = Builders<ContactBook>.Filter.And( Builders<ContactBook>.Filter.Eq("UserId", userId), Builders<ContactBook>.Filter.Eq("Contacts.UserId", friendId));
             var update = Builders<ContactBook>.Update.Set("Contacts.$.Tags", tags);
 
             var result= await _contactContext.ContactBooks.UpdateOneAsync(filter, update);
-            return result.MatchedCount == result.ModifiedCount;
+            return result.MatchedCount == result.ModifiedCount && result.ModifiedCount>0;
         }
 
+
+        /// <summary>
+        /// 更新用户的好友资料
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<bool> UpdateContactInfoAsync(UserIdentity userInfo, CancellationToken cancellationToken)
         {
             //如果某个用户修改了资料，这里找出他的所有好友，然后修改这些好友里的他的资料
-            var allFriend = (await _contactContext.ContactBooks.FindAsync(u => u.UserId == userInfo.UserId)).ToList();
+            var allFriend = (await _contactContext.ContactBooks.FindAsync(u => u.UserId == userInfo.Id)).ToList();
 
             //如果没有好友，直接返回
             if (allFriend == null)
@@ -107,7 +113,7 @@ namespace Contract.Api.Data
             //In: 参数1：要被进行选择的字段， 参数2：参数1字段的值的集合
             //ElemMatch: 参数1：返回一个值的集合  参数2：对参数1的每个元素进行判断的条件，如果为 true，返回该元素
             FilterDefinition<ContactBook> filter = 
-                Builders<ContactBook>.Filter.And(Builders<ContactBook>.Filter.In(c => c.UserId, ids), Builders<ContactBook>.Filter.ElemMatch(c => c.Contacts, contact => contact.UserId ==userInfo.UserId));
+                Builders<ContactBook>.Filter.And(Builders<ContactBook>.Filter.In(c => c.UserId, ids), Builders<ContactBook>.Filter.ElemMatch(c => c.Contacts, contact => contact.UserId ==userInfo.Id));
 
             //更新每个用户里该好友的数据
             //这里是更新ContactBook文档下的子文档，其实就是一个对象里包含着另外一个对象

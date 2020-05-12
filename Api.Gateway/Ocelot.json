@@ -64,7 +64,7 @@
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       },
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
 
       //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
       "UpstreamPathTemplate": "/.well-known{url}",
@@ -84,7 +84,7 @@
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       },
-      "UpstreamHttpMethod": [ "Post" ],
+      "UpstreamHttpMethod": [ "Get","Post","Put" ],
 
       //配置上游服务，在网关中访问这个地址时，会映射到上面的实际action地址,我们要在浏览器中访问这个地址
       "UpstreamPathTemplate": "/connect{url}",

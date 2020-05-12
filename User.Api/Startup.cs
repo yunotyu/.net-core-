@@ -112,7 +112,7 @@ namespace User.Api
                            options.Audience = "user_api";
                            //这里的认证地址可以不用写identity server4的地址
                            //因为认证已经在Ocelot项目里配置过了，所以Ocelot会去认证
-                           options.Authority = "http://localhost:5000";
+                           options.Authority = "http://127.0.0.1:5000";
                            options.RequireHttpsMetadata = false;
                            options.SaveToken = true;
                            //options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

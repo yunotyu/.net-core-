@@ -9,6 +9,7 @@ using Contract.Api.Dtos;
 using System.Threading;
 using Contract.Api.ViewMpdel;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace Contract.Api.Controllers
 {
@@ -19,7 +20,8 @@ namespace Contract.Api.Controllers
         private readonly IContactRepository _contactRepository;
         private readonly IUserService _userService;
 
-        public ContactController(IContactApplyRequestRepository contactApplyRequestRepository, IUserService userService, IContactRepository contactRepository)
+        public ContactController(IContactApplyRequestRepository contactApplyRequestRepository, IUserService userService, IContactRepository contactRepository,
+                                    IHttpContextAccessor httpContextAccessor):base(httpContextAccessor)
         {
             _contactApplyRequestRepository = contactApplyRequestRepository;
             _contactRepository =contactRepository;
@@ -50,9 +52,9 @@ namespace Contract.Api.Controllers
         /// <returns></returns>
         [HttpPut]
         [Route("tag")]
-        public async Task<IActionResult> TagContact(TagContactInputViewModel viewModel)
+        public async Task<IActionResult> TagContact([FromBody]TagContactInputViewModel viewModel)
         {
-            var result=await _contactRepository.TagContactAsync(UserIdentity.UserId, viewModel.FriendId, viewModel.Tags);
+            var result=await _contactRepository.TagContactAsync(UserIdentity.Id, viewModel.FriendId, viewModel.Tags);
             if (result)
             {
                 return Ok();
@@ -69,8 +71,8 @@ namespace Contract.Api.Controllers
         [Route("apply-requests")]
         public async Task<IActionResult> GetApplyRequests()
         {
-            var requests = await _contactApplyRequestRepository.GetRequestListAsync(UserIdentity.UserId);
-            return Ok();
+            var requests = await _contactApplyRequestRepository.GetRequestListAsync(UserIdentity.Id);
+            return Ok(requests);
         }
 
         /// <summary>
@@ -89,7 +91,7 @@ namespace Contract.Api.Controllers
             bool result =await _contactApplyRequestRepository.AddRequestAsync(new Models.ContactApplyRequest()
             {
                 UserId=userId,
-                ApplierId=UserIdentity.UserId,
+                ApplierId=UserIdentity.Id,
                 Name= UserIdentity.Name,
                 Company= UserIdentity.Company,
                 Title= UserIdentity.Title,
@@ -111,9 +113,9 @@ namespace Contract.Api.Controllers
         /// <returns></returns>
         [HttpPut]
         [Route("apply-requests")]
-        public async Task<IActionResult> ApprovalApplyRequests(int applierId)
+        public async Task<IActionResult> ApprovalApplyRequests([FromForm]int applierId)
         {
-            var result = await _contactApplyRequestRepository.ApprovalAsync(UserIdentity.UserId, applierId);
+            var result = await _contactApplyRequestRepository.ApprovalAsync(UserIdentity.Id, applierId);
             if (!result)
             {
                 //日志记录
@@ -123,13 +125,13 @@ namespace Contract.Api.Controllers
             //申请人的信息
             var applierMsg =await _userService.GetBaseUserinfo(applierId);
             //当前用户的信息
-            var userMsg = await _userService.GetBaseUserinfo(UserIdentity.UserId);
+            var userMsg = await _userService.GetBaseUserinfo(UserIdentity.Id);
 
             //因为添加好友是双向的，各自的通讯录都有对方
             //往当前用户的MongoDB通讯录添加好友
-            await _contactRepository.AddContactAsync(UserIdentity.UserId, applierMsg);
+            await _contactRepository.AddContactAsync(UserIdentity.Id, applierMsg);
             //往申请人的MongoDB通讯录添加好友
-            await _contactRepository.AddContactAsync(applierMsg.UserId, userMsg);
+            await _contactRepository.AddContactAsync(applierMsg.Id, userMsg);
 
             return Ok();
         }

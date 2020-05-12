@@ -56,7 +56,7 @@ namespace Contract.Api.Service
             //var content = new FormUrlEncodedContent(form);
             try
             {
-                var response = await _client.GetAsync(HttpMethod.Get, _userUrls[0],userId);
+                var response = await _client.GetAsync(HttpMethod.Get, _userUrls[0]+ "/api/users/userInfo", userId);
                 if (response.StatusCode == HttpStatusCode.OK )
                 {
                     var userStr = await response.Content.ReadAsStringAsync();

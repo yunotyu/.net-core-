@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Contract.Api.Models
     /// <summary>
     /// 发送好友请求的用户的信息
     /// </summary>
+    [BsonIgnoreExtraElements]//在获取MongoDB的文档转换为对象时，忽略_id属性
     public class ContactApplyRequest
     {
 

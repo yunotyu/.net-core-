@@ -71,10 +71,10 @@ namespace Contract.Api.Data
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<List<ContactApplyRequest>> GetRequestListAsync(int userId,CancellationToken cancellationToken)
+        public async Task<List<ContactApplyRequest>> GetRequestListAsync(int userId, CancellationToken cancellationToken)
         {
             //需要引入using MongoDB.Driver;
-            return (await _contactContext.ContactApplyRequests.FindAsync(u => u.UserId == userId)).ToList(cancellationToken);
+            return (await _contactContext.ContactApplyRequests.FindAsync(u => u.UserId == userId)).ToList();
         }
     }
 }
