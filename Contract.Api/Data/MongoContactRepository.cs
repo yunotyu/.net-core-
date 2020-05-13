@@ -107,7 +107,7 @@ namespace Contract.Api.Data
             //然后要更新上面修改资料的用户里的所有好友里该用户的资料
 
             //找出所有拥有修改资料用户好友的id
-            var ids = allFriend.Select(c => c.UserId);
+            var ids = allFriend.SelectMany(cb => cb.Contacts).Select(c => c.UserId);
             //创建一个filter用于选择某个用户里有上面修改资料用户的信息
             //And:可以传入多个用于选择的条件，参数类型都是FilterDefinition，所以都是使用Builders<ContactBook>.Filter.xxx的格式
             //In: 参数1：要被进行选择的字段， 参数2：参数1字段的值的集合

@@ -17,6 +17,7 @@ using log4net;
 using log4net.Repository;
 using log4net.Config;
 using System.IO;
+using Contract.Api.integrationEvent.EventHandling;
 
 namespace Contract.Api
 {
@@ -49,6 +50,10 @@ namespace Contract.Api
             services.AddScoped<IContactRepository, MongoContactRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped(typeof(ContactContext));
+
+            //注入订阅ribbitmq消息的类
+            services.AddScoped<UserProfileChangedEventHandler>();
+
             //将对应的AppSetting去获取配置文件的值，然后注入容器
             //在控制器里可以使用IOption<AppSetting>来获取该值
             services.Configure<AppSetting>(_configuration.GetSection("AppSettings"));
@@ -97,6 +102,37 @@ namespace Contract.Api
             services.AddSingleton<IDnsQuery>(p =>
             {
                 return new LookupClient(IPAddress.Parse("127.0.0.1"), 8600);
+            });
+
+
+            //添加CAP进行rabbitmq消息处理
+            services.AddCap(options =>
+            {
+                //需要另外创建beta_contact这个数据库，作为cap.published和cap.received表存放的数据库
+                options.UseMySql("server=127.0.0.1;port=3306;database=beta_contact;userid=yfr;pwd=123");
+                options.UseRabbitMQ("127.0.0.1");
+
+                options.UseDashboard();
+
+                //CAP支持将当前的CAP服务注册到COSNUL里，由consul服务发现
+                //这个功能要结合上面的UseDashboard使用
+                options.UseDiscovery(o =>
+                {
+                    //consul的主机名和端口号
+                    o.DiscoveryServerHostName = "127.0.0.1";
+                    o.DiscoveryServerPort = 8500;
+
+                    //CAP服务的主机名和地址,端口是这个CAP服务的端口号，可以随意写
+                    o.CurrentNodeHostName = "127.0.0.1";
+                    o.CurrentNodePort = 5801;
+
+                    //CAP注册时的一些信息，注册多个时不能重复,
+                    //这里的名字也是注册到consul里的，最好只用字母和数字
+                    o.NodeId = 2;
+                    o.NodeName = "CAP NO2 Node";
+
+                    //最后访问这个http://本项目地址:本项目端口号/cap/nodes，可以看到面板
+                });
             });
 
             services.AddMvc();

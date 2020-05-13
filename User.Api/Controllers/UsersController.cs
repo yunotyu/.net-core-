@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.JsonPatch;
 using User.Api.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using DotNetCore.CAP;
+using User.Api.Entities.Dtos;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,9 +24,13 @@ namespace User.Api.Controllers
     {
         private UserContext _userContext;
 
+        //产生消息到ribbitmq的对象
+        private ICapPublisher _capPublisher;
+
         //注入IHttpContextAccessor，可以在构造函数里访问HttpContext对象
-        public UsersController(UserContext userContext, IHttpContextAccessor httpContextAccessor) :base(httpContextAccessor)
+        public UsersController(UserContext userContext, IHttpContextAccessor httpContextAccessor, ICapPublisher capPublisher) :base(httpContextAccessor)
         {
+            _capPublisher = capPublisher;
             _userContext = userContext;
         }
 
@@ -105,8 +111,15 @@ namespace User.Api.Controllers
                     //将JsonPatch里面的值赋给user
                     patch.ApplyTo(user);
 
+                    // 发布用户信息变更的消息到ribbitmq里，
+                    //先发消息，再保存到数据库，不然检测不到属性的IsModified
+                    //当消息发出后，可以面板看到http://localhost:8888/cap/published/succeeded发出的消息
+                    //在数据库的cap.published也可以看到记录
+                    RaiseUserprofileChangeEvent(user);
+
                     _userContext.Update(user);
                     _userContext.SaveChanges();
+
                     tra.Commit();
                 }
                 catch (Exception ex)
@@ -117,6 +130,30 @@ namespace User.Api.Controllers
 
             return new object[] { user };
         }
+
+        /// <summary>
+        /// 发布用户信息变更的消息
+        /// </summary>
+        /// <param name="user"></param>
+        private void RaiseUserprofileChangeEvent(AppUser user)
+        {
+            //判断这下面的五个属性的值是否被修改
+            if(_userContext.Entry(user).Property(nameof(user.Name)).IsModified|| _userContext.Entry(user).Property(nameof(user.Avatar)).IsModified ||
+                _userContext.Entry(user).Property(nameof(user.Company)).IsModified || _userContext.Entry(user).Property(nameof(user.Title)).IsModified
+                || _userContext.Entry(user).Property(nameof(user.Name)).IsModified)
+            {
+                //发送一个用户信息被修改的消息到ribbitmq
+                _capPublisher.Publish("finbook.userapi.userprofilechange", new UserIdentity
+                {
+                    UserId=user.Id,
+                    Company=user.Company,
+                    Title=user.Title,
+                    Avatar=user.Avatar,
+                   Name=user.Name
+                });
+            }
+        }
+
 
         /// <summary>
         /// 根据手机检查用户是否存在

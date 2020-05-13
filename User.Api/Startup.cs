@@ -123,6 +123,38 @@ namespace User.Api
                        });
 
             services.AddMvc(options=>options.Filters.Add(typeof(GlobalExceptionFilter))).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddCap(options =>
+            {
+                //使用这个后，会在这个DBContext对应的数据库生成cap.published和cap.received这2个表
+                //来记录消息发送和接收的状态
+                options.UseEntityFramework<UserContext>();
+
+                options.UseRabbitMQ("127.0.0.1");
+
+                //使用一个在网页的消息监控面板
+                options.UseDashboard();
+
+                //CAP支持将当前的CAP服务注册到COSNUL里，由consul服务发现
+                //这个功能要结合上面的UseDashboard使用
+                options.UseDiscovery(o =>
+                {
+                    //consul的主机名和端口号
+                    o.DiscoveryServerHostName = "127.0.0.1";
+                    o.DiscoveryServerPort = 8500;
+
+                    //CAP服务的主机名和地址,端口是这个CAP服务的端口号，可以随意写
+                    o.CurrentNodeHostName = "127.0.0.1";
+                    o.CurrentNodePort = 5800;
+
+                    //CAP注册时的一些信息，注册多个时不能重复,
+                    //这里的名字也是注册到consul里的，最好只用字母和数字
+                    o.NodeId = 1;
+                    o.NodeName = "CAP NO1 Node";
+
+                    //最后访问这个http://本项目地址:本项目端口号/cap/nodes，可以看到面板
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
