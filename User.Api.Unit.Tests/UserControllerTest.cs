@@ -1,5 +1,7 @@
+using DotNetCore.CAP;
 using FluentAssertions;
 using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -50,7 +52,11 @@ namespace User.Api.Unit.Tests
             //该对象，就可以使用
             var loggerMoq = new Mock<ILog>();
             var logger = loggerMoq.Object;
-            var controller = new UsersController(context);
+            var accessorMoq = new Mock<IHttpContextAccessor>();
+            var accessor = accessorMoq.Object;
+            var capMoq = new Mock<ICapPublisher>();
+            var cap = capMoq.Object;
+            var controller = new UsersController(context, accessor, cap);
 
             var response = await controller.Get();
             ////判断最后的结果是不是JSON，如果是，测试成功
@@ -66,7 +72,11 @@ namespace User.Api.Unit.Tests
         public async Task Patch_ReturnNewName_WithExpectedNewPara()
         {
             var context = GetUserContext();
-            UsersController controller = new UsersController(context);
+            var accessorMoq = new Mock<IHttpContextAccessor>();
+            var accessor = accessorMoq.Object;
+            var capMoq = new Mock<ICapPublisher>();
+            var cap = capMoq.Object;
+            UsersController controller = new UsersController(context,accessor, cap);
             //使用jsonpatch对原来的值进行替换
             var data = new JsonPatchDocument<AppUser>();
             data.Replace(u => u.Name, "yu");

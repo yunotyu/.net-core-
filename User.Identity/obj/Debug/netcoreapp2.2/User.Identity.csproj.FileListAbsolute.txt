@@ -32,3 +32,4 @@ C:\Users\Administrator\Desktop\项目\User.Identity\obj\Debug\netcoreapp2.2\User
 C:\Users\Administrator\Desktop\项目\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.csproj.CopyComplete
 C:\Users\Administrator\Desktop\项目\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.dll
 C:\Users\Administrator\Desktop\项目\User.Identity\obj\Debug\netcoreapp2.2\User.Identity.pdb
+C:\Users\admin\source\repos\User.Api\User.Identity\bin\Debug\netcoreapp2.2\skyapm.json

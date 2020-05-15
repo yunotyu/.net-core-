@@ -17,11 +17,16 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Resillience;
 using User.Identity.Authentication;
 using User.Identity.Entities;
 using User.Identity.Infrastructure;
 using User.Identity.Services;
+using zipkin4net;
+using zipkin4net.Middleware;
+using zipkin4net.Tracers.Zipkin;
+using zipkin4net.Transport.Http;
 
 namespace User.Identity
 {
@@ -91,7 +96,7 @@ namespace User.Identity
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -102,9 +107,39 @@ namespace User.Identity
             lifetime.ApplicationStarted.Register(RegisterService);
             lifetime.ApplicationStopped.Register(DelRegisterService);
 
+            //注册到zipkin
+            RegisterZipkinTrace(app, lifetime, loggerFactory);
+
             app.UseIdentityServer();
             app.UseMvc();
         }
+
+
+        //需要在每个服务都注册到zipkin，不然某个服务如果用到，没有注册到zipkin，那么无法看到
+        public void RegisterZipkinTrace(IApplicationBuilder app, IApplicationLifetime lifetime, ILoggerFactory loggerFactory)
+        {
+            lifetime.ApplicationStarted.Register(() =>
+            {
+                //SamplingRate监控所有请求，0.5f只监控一半的请求,有些请求可能监控不到
+                zipkin4net.TraceManager.SamplingRate = 1.0f;
+                //注册这个服务到zipskin
+                var httpSender = new HttpZipkinSender("http://127.0.0.1:9411", "application/json");
+                //需要安装zipkin4net.middleware.aspnetcore
+                var log = new TracingLogger(loggerFactory, "zipkin4net");
+                var tracer = new ZipkinTracer(httpSender, new JSONSpanSerializer(), new Statistics());
+                TraceManager.RegisterTracer(tracer);
+                TraceManager.Start(log);
+            });
+
+            lifetime.ApplicationStopped.Register(() =>
+            {
+                //停止zipkin对这个服务的监控
+                TraceManager.Stop();
+            });
+
+            app.UseTracing("identity_api01");
+        }
+
 
         /// <summary>
         /// 注册这个服务到Consul里

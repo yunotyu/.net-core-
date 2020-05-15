@@ -26,3 +26,4 @@ C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gatewa
 C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.RazorTargetAssemblyInfo.cache
 C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.dll
 C:\Users\Administrator\Desktop\项目\Api.Gateway\obj\Debug\netcoreapp2.2\Gateway.Api.pdb
+C:\Users\admin\source\repos\User.Api\Api.Gateway\bin\Debug\netcoreapp2.2\skyapm.json

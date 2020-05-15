@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:4172",
+      "applicationUrl": "http://localhost:8008",
       "sslPort": 0
     }
   },
@@ -12,13 +12,22 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字
+        "SKYWALKING__SERVICENAME": "contacts_api"
       }
     },
     "Contract.Api": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字
+        "SKYWALKING__SERVICENAME": "contacts_api"
+
       },
       "applicationUrl": "http://localhost:8008"
     }

@@ -12,13 +12,21 @@
       "commandName": "IISExpress",
       "launchBrowser": false,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字,注意是两个__
+        "SKYWALKING__SERVICENAME": "gateways_api"
       }
     },
     "Gateway.Api": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字,注意是两个__
+        "SKYWALKING__SERVICENAME": "gateways_api"
       },
       "applicationUrl": "http://localhost:6699"
     }

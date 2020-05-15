@@ -32,3 +32,4 @@ C:\Users\Administrator\Desktop\项目\User.Api\obj\Debug\netcoreapp2.2\User.Api.
 C:\Users\Administrator\Desktop\项目\User.Api\obj\Debug\netcoreapp2.2\User.Api.csproj.CopyComplete
 C:\Users\Administrator\Desktop\项目\User.Api\obj\Debug\netcoreapp2.2\User.Api.dll
 C:\Users\Administrator\Desktop\项目\User.Api\obj\Debug\netcoreapp2.2\User.Api.pdb
+C:\Users\admin\source\repos\User.Api\User.Api\bin\Debug\netcoreapp2.2\skyapm.json

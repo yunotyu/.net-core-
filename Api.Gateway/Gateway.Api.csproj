@@ -13,6 +13,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Ocelot" Version="13.5.1" />
     <PackageReference Include="Ocelot.Provider.Consul" Version="13.5.1" />
+    <PackageReference Include="SkyAPM.Agent.AspNetCore" Version="0.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="skyapm.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

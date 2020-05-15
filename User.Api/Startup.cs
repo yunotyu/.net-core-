@@ -25,13 +25,20 @@ using System.Net.Http;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using IdentityModel;
+using zipkin4net;
+using zipkin4net.Tracers.Zipkin;
+using zipkin4net.Transport;
+using zipkin4net.Transport.Http;
+using zipkin4net.Tracers;
+using Microsoft.Extensions.Logging.Console;
+using zipkin4net.Middleware;
 
 namespace User.Api
 {
     public class Startup
     {
         public static ILoggerRepository LoggerRepository { get; set; }
-
+        private ILog logger;
         //异常日志缓存字典
         public static Dictionary<string, string> LogDic = new Dictionary<string, string>();
         private ConsulService _consulService;
@@ -45,7 +52,7 @@ namespace User.Api
             XmlConfigurator.ConfigureAndWatch(LoggerRepository, new FileInfo("Configs/log4net.config"));
             //GetLogger第一个参数是我们在Startup定义的LoggerRepository名字，
             //第二参数是我们在配置文件定义的logger节点的logger对象，可以定义多个logger（日志打印对象）
-            ILog logger = LogManager.GetLogger(Startup.LoggerRepository.Name, "logger1");
+            logger = LogManager.GetLogger(Startup.LoggerRepository.Name, "logger1");
 
             //线程扫描写入日志，高并发
             ThreadPool.QueueUserWorkItem((o) =>
@@ -102,7 +109,7 @@ namespace User.Api
             //认证框架会将jwt转换为正常的对象,所以可以拿到claim,这些claim是查询到用户信息
             //放入UserIdentity类里，以供使用
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication(o=>
+            services.AddAuthentication(o =>
             {
                 o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -121,6 +128,7 @@ namespace User.Api
                            //    RoleClaimType = JwtClaimTypes.Role,
                            //};
                        });
+
 
             services.AddMvc(options=>options.Filters.Add(typeof(GlobalExceptionFilter))).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -158,7 +166,7 @@ namespace User.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime,ILoggerFactory loggerFactory)
         {
             //如果是开发环境
             if (env.IsDevelopment())
@@ -196,6 +204,9 @@ namespace User.Api
             lifetime.ApplicationStarted.Register(RegisterService);
             lifetime.ApplicationStopped.Register(DelRegisterService);
 
+            //注册到zipkin
+            //RegisterZipkinTrace(app,lifetime,loggerFactory);
+
             app.UseAuthentication();
 
             app.UseMvc();
@@ -229,6 +240,29 @@ namespace User.Api
 
         }
 
+        //需要在每个服务都注册到zipkin，不然某个服务如果用到，没有注册到zipkin，那么无法看到
+        public void RegisterZipkinTrace(IApplicationBuilder app,IApplicationLifetime lifetime, ILoggerFactory loggerFactory)
+        {
+            lifetime.ApplicationStarted.Register(() =>
+            {
+                zipkin4net.TraceManager.SamplingRate = 1.0f;
+                //注册这个服务到zipskin
+                var httpSender = new HttpZipkinSender("http://127.0.0.1:9411", "application/json");
+                //需要安装zipkin4net.middleware.aspnetcore
+                var log = new TracingLogger(loggerFactory, "zipkin4net");
+                var tracer = new ZipkinTracer(httpSender, new JSONSpanSerializer(),new Statistics());
+                TraceManager.RegisterTracer(tracer);
+                TraceManager.Start(log);
+            });
+
+            lifetime.ApplicationStopped.Register(() =>
+            {
+                //停止zipkin对这个服务的监控
+                //TraceManager.Stop();
+            });
+
+            app.UseTracing("user_api01");
+        }
 
 
         /// <summary>

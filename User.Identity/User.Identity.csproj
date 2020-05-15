@@ -14,6 +14,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Polly" Version="7.2.0" />
+    <PackageReference Include="SkyAPM.Agent.AspNetCore" Version="0.9.0" />
+    <PackageReference Include="zipkin4net" Version="1.5.0" />
+    <PackageReference Include="zipkin4net.middleware.aspnetcore" Version="1.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +25,12 @@
 
   <ItemGroup>
     <Folder Include="LogFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="skyapm.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -15,3 +15,5 @@ C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\obj\Debug\netcoreapp2.2
 C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\obj\Debug\netcoreapp2.2\User.Api.Unit.Tests.csproj.CopyComplete
 C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\obj\Debug\netcoreapp2.2\User.Api.Unit.Tests.dll
 C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\obj\Debug\netcoreapp2.2\User.Api.Unit.Tests.pdb
+C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\bin\Debug\netcoreapp2.2\Resillience.dll
+C:\Users\admin\source\repos\User.Api\User.Api.Unit.Tests\bin\Debug\netcoreapp2.2\Resillience.pdb

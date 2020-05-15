@@ -11,13 +11,21 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字,注意是两个__
+        "SKYWALKING__SERVICENAME": "identitys_api"
       }
     },
     "User.Identity": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //设置SkyWalking和本项目的关系
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        //注册到SkyWalking里这个服务的名字,注意是两个__
+        "SKYWALKING__SERVICENAME": "identitys_api"
       },
       "applicationUrl": "http://127.0.0.1:5000"
     }

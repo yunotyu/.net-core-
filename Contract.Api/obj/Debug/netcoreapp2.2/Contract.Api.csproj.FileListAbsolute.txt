@@ -32,3 +32,4 @@ C:\Users\Administrator\Desktop\项目\Contract.Api\obj\Debug\netcoreapp2.2\Contr
 C:\Users\Administrator\Desktop\项目\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.csproj.CopyComplete
 C:\Users\Administrator\Desktop\项目\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.dll
 C:\Users\Administrator\Desktop\项目\Contract.Api\obj\Debug\netcoreapp2.2\Contract.Api.pdb
+C:\Users\admin\source\repos\User.Api\Contract.Api\bin\Debug\netcoreapp2.2\skyapm.json

@@ -1,0 +1,699 @@
+2020-05-15 10:43:48.401 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 10:43:48.431 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 10:43:48.431 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 10:43:48.431 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 10:43:48.451 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 10:43:48.452 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 10:43:48.452 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 10:43:48.452 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 10:43:48.499 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 10:43:48.499 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 10:43:48.500 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 10:43:48.500 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 10:43:48.657 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:44:03.487 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:44:03.499 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:44:18.467 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:44:18.475 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:44:33.471 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:44:33.482 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:44:48.468 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:44:48.481 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:45:03.473 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:45:03.485 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:45:18.470 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:45:18.482 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:45:33.474 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:45:33.484 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:45:48.473 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[127.0.0.1:8888].
+2020-05-15 10:45:48.485 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[127.0.0.1:8888].
+2020-05-15 10:56:29.684 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 10:56:29.723 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 10:56:29.723 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 10:56:29.723 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 10:56:29.723 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 10:56:29.724 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 10:56:29.724 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 10:56:29.724 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 10:56:29.810 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 10:56:29.811 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 10:56:29.811 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 10:56:29.811 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 10:56:30.291 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:56:44.758 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:56:44.769 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:56:59.811 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:56:59.890 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:57:14.735 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:57:14.745 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:57:29.759 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:57:29.768 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:57:52.457 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 10:57:52.488 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 10:57:52.489 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 10:57:52.489 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 10:57:52.489 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 10:57:52.489 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 10:57:52.489 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 10:57:52.490 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 10:57:52.570 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 10:57:52.571 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 10:57:52.572 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 10:57:52.572 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 10:57:52.702 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:58:07.513 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:58:07.521 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:58:22.535 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:58:22.554 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:58:37.511 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:58:37.521 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:59:37.194 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 10:59:37.221 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 10:59:37.222 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 10:59:37.222 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 10:59:37.222 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 10:59:37.222 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 10:59:37.222 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 10:59:37.223 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 10:59:37.280 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 10:59:37.281 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 10:59:37.281 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 10:59:37.281 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 10:59:37.363 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 10:59:52.257 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 10:59:52.267 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 11:00:07.293 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:8888].
+2020-05-15 11:00:07.302 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:8888].
+2020-05-15 11:45:29.646 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 11:45:29.676 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 11:45:29.676 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 11:45:29.676 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 11:45:29.677 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 11:45:29.677 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 11:45:29.677 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 11:45:29.677 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 11:45:29.742 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 11:45:29.743 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 11:45:29.744 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 11:45:29.744 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 11:45:29.838 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 11:45:30.825 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=5].
+2020-05-15 11:45:31.374 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=10].
+2020-05-15 11:45:35.715 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0317758s
+2020-05-15 11:45:41.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023331s
+2020-05-15 11:45:47.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024036s
+2020-05-15 11:45:50.693 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023527s
+2020-05-15 11:45:56.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029021s
+2020-05-15 11:45:59.707 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:45:59 +00:00
+2020-05-15 11:45:59.709 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32763 32767 1000 1000
+2020-05-15 11:46:02.701 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0105447s
+2020-05-15 11:46:05.688 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021112s
+2020-05-15 11:46:11.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018928s
+2020-05-15 11:46:17.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0027102s
+2020-05-15 11:46:20.693 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023593s
+2020-05-15 11:46:26.689 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0030681s
+2020-05-15 11:46:29.693 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 17M ThreadPool 32758 32767 1000 1000
+2020-05-15 11:46:32.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021401s
+2020-05-15 11:46:35.687 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021232s
+2020-05-15 11:46:41.694 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0045589s
+2020-05-15 11:46:47.694 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025090s
+2020-05-15 11:46:50.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0032319s
+2020-05-15 11:46:56.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020025s
+2020-05-15 11:46:59.687 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32761 32767 1000 1000
+2020-05-15 11:46:59.687 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:46:59 +00:00
+2020-05-15 11:47:02.690 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025906s
+2020-05-15 11:47:05.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021826s
+2020-05-15 11:47:11.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023569s
+2020-05-15 11:47:17.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022855s
+2020-05-15 11:47:20.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026161s
+2020-05-15 11:47:26.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0031755s
+2020-05-15 11:47:29.693 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 19M ThreadPool 32756 32767 1000 1000
+2020-05-15 11:47:32.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023814s
+2020-05-15 11:47:35.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025133s
+2020-05-15 11:47:41.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0050788s
+2020-05-15 11:47:47.755 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 3 trace segment. cost: 00:00:00.0677399s
+2020-05-15 11:47:50.695 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0033155s
+2020-05-15 11:47:56.693 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023623s
+2020-05-15 11:47:59.689 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 20M ThreadPool 32756 32767 1000 1000
+2020-05-15 11:47:59.690 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:47:59 +00:00
+2020-05-15 11:48:02.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025781s
+2020-05-15 11:48:05.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020836s
+2020-05-15 11:48:11.688 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0098160s
+2020-05-15 11:48:17.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020214s
+2020-05-15 11:48:23.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020460s
+2020-05-15 11:48:26.690 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019159s
+2020-05-15 11:48:29.693 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 21M ThreadPool 32761 32767 1000 1000
+2020-05-15 11:48:32.699 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0127691s
+2020-05-15 11:48:38.688 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021036s
+2020-05-15 11:48:41.679 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020319s
+2020-05-15 11:48:47.692 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021644s
+2020-05-15 11:48:53.689 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022135s
+2020-05-15 11:48:56.695 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 4 trace segment. cost: 00:00:00.0033226s
+2020-05-15 11:48:59.685 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:48:59 +00:00
+2020-05-15 11:48:59.687 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 24M ThreadPool 32756 32767 1000 1000
+2020-05-15 11:49:02.697 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0097774s
+2020-05-15 11:49:08.691 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020327s
+2020-05-15 11:49:11.700 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0134937s
+2020-05-15 11:49:17.689 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017386s
+2020-05-15 11:54:56.741 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 11:54:56.780 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 11:54:56.780 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 11:54:56.780 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 11:54:56.781 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 11:54:56.781 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 11:54:56.781 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 11:54:56.781 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 11:54:56.848 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 11:54:56.849 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 11:54:56.850 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 11:54:56.850 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 11:54:56.990 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 11:54:57.412 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=5].
+2020-05-15 11:54:57.964 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=14].
+2020-05-15 11:55:02.838 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0446114s
+2020-05-15 11:55:05.792 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0044673s
+2020-05-15 11:55:11.791 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029376s
+2020-05-15 11:55:17.793 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0055631s
+2020-05-15 11:55:20.791 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0034230s
+2020-05-15 11:55:26.792 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024683s
+2020-05-15 11:55:26.811 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:55:26 +00:00
+2020-05-15 11:55:26.814 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32763 32767 1000 1000
+2020-05-15 11:55:32.792 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024104s
+2020-05-15 11:55:35.783 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022141s
+2020-05-15 11:55:41.784 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025408s
+2020-05-15 11:55:47.792 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0050178s
+2020-05-15 11:55:50.783 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017141s
+2020-05-15 11:55:56.798 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0094113s
+2020-05-15 11:55:56.802 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.0625 GenCollectCount 0 0 0 17M ThreadPool 32759 32767 1000 1000
+2020-05-15 11:56:02.783 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022907s
+2020-05-15 11:56:05.789 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021065s
+2020-05-15 11:56:11.791 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0041744s
+2020-05-15 11:56:17.783 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019127s
+2020-05-15 11:56:20.790 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026561s
+2020-05-15 11:56:26.795 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32755 32767 1000 1000
+2020-05-15 11:56:26.795 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 3:56:26 +00:00
+2020-05-15 11:56:26.796 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0049247s
+2020-05-15 16:00:49.137 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 16:00:49.167 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 16:00:49.168 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 16:00:49.168 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 16:00:49.169 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 16:00:49.169 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 16:00:49.169 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 16:00:49.169 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 16:00:49.269 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 16:00:49.270 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 16:00:49.270 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 16:00:49.270 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 16:00:49.354 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 16:00:51.585 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=2].
+2020-05-15 16:00:52.194 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=2].
+2020-05-15 16:00:58.486 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.2832477s
+2020-05-15 16:01:04.174 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0049179s
+2020-05-15 16:01:07.187 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0044258s
+2020-05-15 16:01:13.190 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0123912s
+2020-05-15 16:01:19.186 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0071947s
+2020-05-15 16:01:19.233 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:01:19 +00:00
+2020-05-15 16:01:19.236 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32763 32767 1000 1000
+2020-05-15 16:01:22.181 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0030750s
+2020-05-15 16:01:28.171 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019665s
+2020-05-15 16:01:34.181 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026352s
+2020-05-15 16:01:37.182 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019574s
+2020-05-15 16:01:43.184 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022875s
+2020-05-15 16:01:49.182 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 17M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:01:49.190 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0114326s
+2020-05-15 16:01:52.171 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020580s
+2020-05-15 16:01:58.171 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021822s
+2020-05-15 16:07:34.560 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 16:07:34.587 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 16:07:34.588 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 16:07:34.588 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 16:07:34.588 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 16:07:34.588 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 16:07:34.588 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 16:07:34.589 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 16:07:34.642 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 16:07:34.643 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 16:07:34.643 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 16:07:34.643 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 16:07:34.728 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 16:07:35.231 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=2].
+2020-05-15 16:07:35.782 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=6].
+2020-05-15 16:07:37.626 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0318761s
+2020-05-15 16:07:43.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021874s
+2020-05-15 16:07:49.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021349s
+2020-05-15 16:07:52.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025159s
+2020-05-15 16:07:58.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0028346s
+2020-05-15 16:08:04.605 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0032217s
+2020-05-15 16:08:04.626 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32762 32767 1000 1000
+2020-05-15 16:08:04.626 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:08:04 +00:00
+2020-05-15 16:08:07.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018881s
+2020-05-15 16:08:13.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016449s
+2020-05-15 16:08:19.611 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0106358s
+2020-05-15 16:08:22.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018035s
+2020-05-15 16:08:28.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018876s
+2020-05-15 16:08:34.606 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 17M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:08:34.606 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0054588s
+2020-05-15 16:08:37.591 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0038401s
+2020-05-15 16:08:43.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024808s
+2020-05-15 16:08:49.589 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020528s
+2020-05-15 16:08:52.590 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023390s
+2020-05-15 16:08:58.589 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017113s
+2020-05-15 16:09:04.608 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32760 32767 1000 1000
+2020-05-15 16:09:04.608 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0060674s
+2020-05-15 16:09:04.608 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:09:04 +00:00
+2020-05-15 16:09:07.589 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021931s
+2020-05-15 16:33:58.642 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 16:33:58.671 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 16:33:58.671 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 16:33:58.671 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 16:33:58.671 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 16:33:58.672 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 16:33:58.672 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 16:33:58.672 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 16:33:58.734 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 16:33:58.735 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 16:33:58.735 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 16:33:58.735 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 16:33:58.861 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 16:33:59.286 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=2].
+2020-05-15 16:33:59.828 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=9].
+2020-05-15 16:34:04.715 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0320299s
+2020-05-15 16:34:10.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019175s
+2020-05-15 16:34:13.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020561s
+2020-05-15 16:34:19.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020414s
+2020-05-15 16:34:25.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018802s
+2020-05-15 16:34:28.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023864s
+2020-05-15 16:34:28.713 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:34:28 +00:00
+2020-05-15 16:34:28.713 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32763 32767 1000 1000
+2020-05-15 16:34:34.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025889s
+2020-05-15 16:34:40.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016114s
+2020-05-15 16:34:43.677 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0058343s
+2020-05-15 16:34:49.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019075s
+2020-05-15 16:34:55.685 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0058740s
+2020-05-15 16:34:58.688 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0079551s
+2020-05-15 16:34:58.688 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 17M ThreadPool 32759 32767 1000 1000
+2020-05-15 16:35:04.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020930s
+2020-05-15 16:35:10.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020368s
+2020-05-15 16:35:13.679 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019628s
+2020-05-15 16:35:19.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014178s
+2020-05-15 16:35:25.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021175s
+2020-05-15 16:35:28.684 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:35:28 +00:00
+2020-05-15 16:35:28.684 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32757 32767 1000 1000
+2020-05-15 16:35:28.685 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0040248s
+2020-05-15 16:35:34.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016687s
+2020-05-15 16:35:40.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014411s
+2020-05-15 16:35:43.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019338s
+2020-05-15 16:35:49.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014514s
+2020-05-15 16:35:55.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025983s
+2020-05-15 16:35:58.684 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:36:01.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0055508s
+2020-05-15 16:36:04.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015648s
+2020-05-15 16:36:10.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0020365s
+2020-05-15 16:36:16.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017332s
+2020-05-15 16:36:19.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017896s
+2020-05-15 16:36:25.679 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014706s
+2020-05-15 16:36:28.676 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:36:28 +00:00
+2020-05-15 16:36:28.676 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 19M ThreadPool 32755 32767 1000 1000
+2020-05-15 16:36:31.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021061s
+2020-05-15 16:36:34.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025149s
+2020-05-15 16:36:40.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015820s
+2020-05-15 16:36:46.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019306s
+2020-05-15 16:36:49.686 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013282s
+2020-05-15 16:36:55.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015640s
+2020-05-15 16:36:58.679 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 20M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:37:01.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013680s
+2020-05-15 16:37:04.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015543s
+2020-05-15 16:37:10.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014652s
+2020-05-15 16:37:16.685 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0041808s
+2020-05-15 16:37:19.685 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0044299s
+2020-05-15 16:37:25.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017984s
+2020-05-15 16:37:28.678 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 21M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:37:28.679 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:37:28 +00:00
+2020-05-15 16:37:31.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014569s
+2020-05-15 16:37:34.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013295s
+2020-05-15 16:37:40.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013676s
+2020-05-15 16:37:46.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017304s
+2020-05-15 16:37:49.679 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014185s
+2020-05-15 16:37:55.683 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017254s
+2020-05-15 16:37:58.684 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 22M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:38:01.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016066s
+2020-05-15 16:38:04.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0032018s
+2020-05-15 16:38:10.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015429s
+2020-05-15 16:38:16.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019164s
+2020-05-15 16:38:19.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026040s
+2020-05-15 16:38:25.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0058072s
+2020-05-15 16:38:28.679 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 22M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:38:28.679 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:38:28 +00:00
+2020-05-15 16:38:31.681 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017619s
+2020-05-15 16:38:34.679 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015032s
+2020-05-15 16:38:40.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018134s
+2020-05-15 16:38:46.680 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022439s
+2020-05-15 16:38:49.684 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019476s
+2020-05-15 16:38:55.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011492s
+2020-05-15 16:38:58.685 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 23M ThreadPool 32760 32767 1000 1000
+2020-05-15 16:39:01.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015759s
+2020-05-15 16:39:04.682 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019656s
+2020-05-15 16:44:08.871 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-15 16:44:08.901 +08:00 [users_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-15 16:44:08.902 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-15 16:44:08.961 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-15 16:44:08.962 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.EntityFrameworkCore].
+2020-05-15 16:44:08.963 +08:00 [users_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-15 16:44:08.963 +08:00 [users_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-15 16:44:09.043 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-15 16:44:09.496 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=2].
+2020-05-15 16:44:10.026 +08:00 [users_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=14].
+2020-05-15 16:44:14.949 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0293351s
+2020-05-15 16:44:17.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025008s
+2020-05-15 16:44:23.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015142s
+2020-05-15 16:44:29.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014756s
+2020-05-15 16:44:32.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021040s
+2020-05-15 16:44:38.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0027471s
+2020-05-15 16:44:38.931 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:44:38 +00:00
+2020-05-15 16:44:38.934 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 16M ThreadPool 32763 32767 1000 1000
+2020-05-15 16:44:44.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014420s
+2020-05-15 16:44:47.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023901s
+2020-05-15 16:44:53.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017100s
+2020-05-15 16:44:59.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016200s
+2020-05-15 16:45:02.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016091s
+2020-05-15 16:45:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 17M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:45:08.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021596s
+2020-05-15 16:45:14.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015606s
+2020-05-15 16:45:17.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014398s
+2020-05-15 16:45:23.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017839s
+2020-05-15 16:45:29.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015808s
+2020-05-15 16:45:32.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015700s
+2020-05-15 16:45:38.917 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 18M ThreadPool 32757 32767 1000 1000
+2020-05-15 16:45:38.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019568s
+2020-05-15 16:45:38.918 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:45:38 +00:00
+2020-05-15 16:45:44.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024831s
+2020-05-15 16:45:47.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015103s
+2020-05-15 16:45:50.951 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0391462s
+2020-05-15 16:45:53.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016157s
+2020-05-15 16:45:59.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0037594s
+2020-05-15 16:46:02.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022789s
+2020-05-15 16:46:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 19M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:46:08.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016222s
+2020-05-15 16:46:14.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0054702s
+2020-05-15 16:46:17.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 3 trace segment. cost: 00:00:00.0031237s
+2020-05-15 16:46:23.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013867s
+2020-05-15 16:46:29.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012383s
+2020-05-15 16:46:32.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017131s
+2020-05-15 16:46:38.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 20M ThreadPool 32760 32767 1000 1000
+2020-05-15 16:46:38.916 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:46:38 +00:00
+2020-05-15 16:46:38.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0045168s
+2020-05-15 16:46:44.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012345s
+2020-05-15 16:46:47.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0041614s
+2020-05-15 16:46:53.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018062s
+2020-05-15 16:46:59.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011005s
+2020-05-15 16:47:02.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016245s
+2020-05-15 16:47:05.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0027158s
+2020-05-15 16:47:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 21M ThreadPool 32760 32767 1000 1000
+2020-05-15 16:47:08.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018713s
+2020-05-15 16:47:14.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014492s
+2020-05-15 16:47:17.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014300s
+2020-05-15 16:47:23.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016903s
+2020-05-15 16:47:29.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0044945s
+2020-05-15 16:47:32.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014062s
+2020-05-15 16:47:35.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0025442s
+2020-05-15 16:47:38.915 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:47:38 +00:00
+2020-05-15 16:47:38.918 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 22M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:47:38.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0047490s
+2020-05-15 16:47:44.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014048s
+2020-05-15 16:47:47.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012983s
+2020-05-15 16:47:53.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0028132s
+2020-05-15 16:47:59.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018542s
+2020-05-15 16:48:02.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014626s
+2020-05-15 16:48:08.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 23M ThreadPool 32755 32767 1000 1000
+2020-05-15 16:48:08.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0052063s
+2020-05-15 16:48:14.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016858s
+2020-05-15 16:48:17.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015965s
+2020-05-15 16:48:23.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012893s
+2020-05-15 16:48:29.920 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0056347s
+2020-05-15 16:48:35.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012792s
+2020-05-15 16:48:38.928 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:48:38 +00:00
+2020-05-15 16:48:38.929 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 24M ThreadPool 32754 32767 1000 1000
+2020-05-15 16:48:38.933 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0170234s
+2020-05-15 16:48:44.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022066s
+2020-05-15 16:48:50.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012537s
+2020-05-15 16:48:53.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019992s
+2020-05-15 16:48:59.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015684s
+2020-05-15 16:49:05.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012856s
+2020-05-15 16:49:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.03125 GenCollectCount 0 0 0 25M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:49:08.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026626s
+2020-05-15 16:49:14.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022221s
+2020-05-15 16:49:20.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010351s
+2020-05-15 16:49:23.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017320s
+2020-05-15 16:49:29.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016028s
+2020-05-15 16:49:35.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011031s
+2020-05-15 16:49:38.918 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.046875 GenCollectCount 0 0 0 25M ThreadPool 32757 32767 1000 1000
+2020-05-15 16:49:38.919 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:49:38 +00:00
+2020-05-15 16:49:38.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0071385s
+2020-05-15 16:49:44.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015981s
+2020-05-15 16:49:50.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023499s
+2020-05-15 16:49:53.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013964s
+2020-05-15 16:49:59.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015573s
+2020-05-15 16:50:05.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010909s
+2020-05-15 16:50:08.904 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 26M ThreadPool 32755 32767 1000 1000
+2020-05-15 16:50:08.909 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0069787s
+2020-05-15 16:50:14.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0044335s
+2020-05-15 16:50:20.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012778s
+2020-05-15 16:50:23.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011556s
+2020-05-15 16:50:29.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015508s
+2020-05-15 16:50:35.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017927s
+2020-05-15 16:50:38.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022871s
+2020-05-15 16:50:38.918 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:50:38 +00:00
+2020-05-15 16:50:38.926 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 27M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:50:44.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015175s
+2020-05-15 16:50:50.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013624s
+2020-05-15 16:50:53.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013912s
+2020-05-15 16:50:59.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021674s
+2020-05-15 16:51:06.002 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0884941s
+2020-05-15 16:51:08.903 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 28M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:51:08.906 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0050290s
+2020-05-15 16:51:14.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024421s
+2020-05-15 16:51:20.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026767s
+2020-05-15 16:51:23.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012043s
+2020-05-15 16:51:29.902 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009946s
+2020-05-15 16:51:35.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014878s
+2020-05-15 16:51:38.917 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:51:38 +00:00
+2020-05-15 16:51:38.923 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 28M ThreadPool 32755 32767 1000 1000
+2020-05-15 16:51:38.923 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0105003s
+2020-05-15 16:51:44.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011138s
+2020-05-15 16:51:50.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014711s
+2020-05-15 16:51:53.912 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010559s
+2020-05-15 16:51:59.912 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010650s
+2020-05-15 16:52:05.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018169s
+2020-05-15 16:52:08.908 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 29M ThreadPool 32757 32767 1000 1000
+2020-05-15 16:52:08.912 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0057897s
+2020-05-15 16:52:14.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013396s
+2020-05-15 16:52:20.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016237s
+2020-05-15 16:52:23.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029754s
+2020-05-15 16:52:29.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014651s
+2020-05-15 16:52:35.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011894s
+2020-05-15 16:52:38.908 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 30M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:52:38.908 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:52:38 +00:00
+2020-05-15 16:52:38.909 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025777s
+2020-05-15 16:52:44.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012598s
+2020-05-15 16:52:50.907 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0034874s
+2020-05-15 16:52:53.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0031266s
+2020-05-15 16:52:56.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021348s
+2020-05-15 16:52:59.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018704s
+2020-05-15 16:53:05.918 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0063482s
+2020-05-15 16:53:08.919 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 31M ThreadPool 32756 32767 1000 1000
+2020-05-15 16:53:11.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013294s
+2020-05-15 16:53:14.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019048s
+2020-05-15 16:53:20.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014780s
+2020-05-15 16:53:26.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012536s
+2020-05-15 16:53:29.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014546s
+2020-05-15 16:53:35.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012294s
+2020-05-15 16:53:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:53:38 +00:00
+2020-05-15 16:53:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 32M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:53:41.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014156s
+2020-05-15 16:53:44.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011060s
+2020-05-15 16:53:50.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010655s
+2020-05-15 16:53:56.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016600s
+2020-05-15 16:53:59.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015404s
+2020-05-15 16:54:05.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012839s
+2020-05-15 16:54:08.913 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 33M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:54:11.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029736s
+2020-05-15 16:54:14.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015965s
+2020-05-15 16:54:20.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011633s
+2020-05-15 16:54:26.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011644s
+2020-05-15 16:54:29.919 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0033294s
+2020-05-15 16:54:35.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014253s
+2020-05-15 16:54:38.913 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:54:38 +00:00
+2020-05-15 16:54:38.913 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 33M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:54:41.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015472s
+2020-05-15 16:54:44.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012591s
+2020-05-15 16:54:50.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021254s
+2020-05-15 16:54:56.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010621s
+2020-05-15 16:54:59.936 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0215536s
+2020-05-15 16:55:05.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011267s
+2020-05-15 16:55:08.915 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 34M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:55:11.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009980s
+2020-05-15 16:55:14.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010688s
+2020-05-15 16:55:20.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 6 trace segment. cost: 00:00:00.0166024s
+2020-05-15 16:55:26.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011669s
+2020-05-15 16:55:29.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010737s
+2020-05-15 16:55:35.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012044s
+2020-05-15 16:55:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 38M ThreadPool 32757 32767 1000 1000
+2020-05-15 16:55:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:55:38 +00:00
+2020-05-15 16:55:41.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012825s
+2020-05-15 16:55:44.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015386s
+2020-05-15 16:55:50.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013431s
+2020-05-15 16:55:56.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016734s
+2020-05-15 16:55:59.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013826s
+2020-05-15 16:56:05.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012571s
+2020-05-15 16:56:08.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 38M ThreadPool 32760 32767 1000 1000
+2020-05-15 16:56:11.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014409s
+2020-05-15 16:56:14.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018831s
+2020-05-15 16:56:20.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013153s
+2020-05-15 16:56:26.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014907s
+2020-05-15 16:56:29.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014988s
+2020-05-15 16:56:35.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013550s
+2020-05-15 16:56:38.916 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:56:38 +00:00
+2020-05-15 16:56:38.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 39M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:56:41.903 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008907s
+2020-05-15 16:56:44.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010860s
+2020-05-15 16:56:50.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010075s
+2020-05-15 16:56:56.904 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011760s
+2020-05-15 16:56:59.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0030007s
+2020-05-15 16:57:05.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029525s
+2020-05-15 16:57:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 40M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:57:08.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0020163s
+2020-05-15 16:57:11.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012623s
+2020-05-15 16:57:14.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015250s
+2020-05-15 16:57:20.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019254s
+2020-05-15 16:57:26.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014476s
+2020-05-15 16:57:32.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008795s
+2020-05-15 16:57:35.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013757s
+2020-05-15 16:57:38.917 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:57:38 +00:00
+2020-05-15 16:57:38.921 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 41M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:57:41.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013552s
+2020-05-15 16:57:47.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013351s
+2020-05-15 16:57:50.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013975s
+2020-05-15 16:57:56.917 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015935s
+2020-05-15 16:58:02.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012059s
+2020-05-15 16:58:05.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011634s
+2020-05-15 16:58:08.918 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 42M ThreadPool 32758 32767 1000 1000
+2020-05-15 16:58:11.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016697s
+2020-05-15 16:58:17.916 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0024586s
+2020-05-15 16:58:20.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011731s
+2020-05-15 16:58:26.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012227s
+2020-05-15 16:58:32.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011608s
+2020-05-15 16:58:35.914 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013847s
+2020-05-15 16:58:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:58:38 +00:00
+2020-05-15 16:58:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 42M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:58:41.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014406s
+2020-05-15 16:58:47.915 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011423s
+2020-05-15 16:58:50.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012892s
+2020-05-15 16:58:56.912 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009928s
+2020-05-15 16:59:02.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011820s
+2020-05-15 16:59:05.913 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010528s
+2020-05-15 16:59:08.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 43M ThreadPool 32762 32767 1000 1000
+2020-05-15 16:59:11.920 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0047075s
+2020-05-15 16:59:29.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0029962s
+2020-05-15 16:59:32.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010017s
+2020-05-15 16:59:38.902 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 44M ThreadPool 32761 32767 1000 1000
+2020-05-15 16:59:38.902 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 8:59:38 +00:00
+2020-05-15 16:59:38.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011662s
+2020-05-15 16:59:44.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011681s
+2020-05-15 16:59:47.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012140s
+2020-05-15 16:59:53.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009694s
+2020-05-15 16:59:59.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011733s
+2020-05-15 17:00:02.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010893s
+2020-05-15 17:00:08.916 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 45M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:00:08.936 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0051054s
+2020-05-15 17:00:14.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011802s
+2020-05-15 17:00:17.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008690s
+2020-05-15 17:00:23.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012065s
+2020-05-15 17:00:29.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013324s
+2020-05-15 17:00:32.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009399s
+2020-05-15 17:00:38.915 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 45M ThreadPool 32760 32767 1000 1000
+2020-05-15 17:00:38.915 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:00:38 +00:00
+2020-05-15 17:00:38.932 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012596s
+2020-05-15 17:00:44.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014201s
+2020-05-15 17:00:47.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010040s
+2020-05-15 17:00:53.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025530s
+2020-05-15 17:00:59.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011892s
+2020-05-15 17:01:02.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011079s
+2020-05-15 17:01:08.915 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 46M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:01:08.933 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026765s
+2020-05-15 17:01:14.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021623s
+2020-05-15 17:01:17.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011154s
+2020-05-15 17:01:23.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0026290s
+2020-05-15 17:01:29.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010121s
+2020-05-15 17:01:32.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011825s
+2020-05-15 17:01:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:01:38 +00:00
+2020-05-15 17:01:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 47M ThreadPool 32758 32767 1000 1000
+2020-05-15 17:01:38.932 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019482s
+2020-05-15 17:01:44.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010557s
+2020-05-15 17:01:47.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010259s
+2020-05-15 17:01:53.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009763s
+2020-05-15 17:01:59.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010883s
+2020-05-15 17:02:02.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010301s
+2020-05-15 17:02:08.905 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 48M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:02:08.937 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0066607s
+2020-05-15 17:02:14.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010218s
+2020-05-15 17:02:17.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008918s
+2020-05-15 17:02:23.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014229s
+2020-05-15 17:02:29.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013768s
+2020-05-15 17:02:32.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009455s
+2020-05-15 17:02:38.915 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 48M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:02:38.915 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:02:38 +00:00
+2020-05-15 17:02:38.934 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0039643s
+2020-05-15 17:02:44.928 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009286s
+2020-05-15 17:02:50.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009987s
+2020-05-15 17:02:53.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019440s
+2020-05-15 17:02:59.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0032378s
+2020-05-15 17:03:05.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012085s
+2020-05-15 17:03:08.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 49M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:03:08.935 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0051516s
+2020-05-15 17:03:14.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011063s
+2020-05-15 17:03:20.928 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0010053s
+2020-05-15 17:03:23.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0022538s
+2020-05-15 17:03:29.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021815s
+2020-05-15 17:03:35.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012185s
+2020-05-15 17:03:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.03125 GenCollectCount 0 0 0 50M ThreadPool 32759 32767 1000 1000
+2020-05-15 17:03:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:03:38 +00:00
+2020-05-15 17:03:38.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017665s
+2020-05-15 17:03:44.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012332s
+2020-05-15 17:03:50.942 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008696s
+2020-05-15 17:03:53.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012351s
+2020-05-15 17:03:59.935 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008283s
+2020-05-15 17:04:05.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012616s
+2020-05-15 17:04:08.913 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 50M ThreadPool 32764 32767 1000 1000
+2020-05-15 17:04:08.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023575s
+2020-05-15 17:04:14.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011278s
+2020-05-15 17:04:20.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009985s
+2020-05-15 17:04:23.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009194s
+2020-05-15 17:04:29.945 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023007s
+2020-05-15 17:04:35.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013055s
+2020-05-15 17:04:38.914 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 51M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:04:38.914 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:04:38 +00:00
+2020-05-15 17:04:38.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009692s
+2020-05-15 17:04:44.931 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013095s
+2020-05-15 17:04:50.932 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0018589s
+2020-05-15 17:04:53.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016579s
+2020-05-15 17:04:59.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0012664s
+2020-05-15 17:05:05.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011204s
+2020-05-15 17:05:08.913 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 52M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:05:08.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0013737s
+2020-05-15 17:05:14.942 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008455s
+2020-05-15 17:05:20.930 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011528s
+2020-05-15 17:05:23.944 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008289s
+2020-05-15 17:05:29.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0008682s
+2020-05-15 17:05:35.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009616s
+2020-05-15 17:05:38.913 +08:00 [users_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/15 9:05:38 +00:00
+2020-05-15 17:05:38.913 +08:00 [users_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 53M ThreadPool 32761 32767 1000 1000
+2020-05-15 17:05:38.945 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0011653s
+2020-05-15 17:05:44.928 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009227s
+2020-05-15 17:05:50.929 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0009852s
+2020-05-15 17:05:53.960 +08:00 [users_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Shutdown connection[localhost:11800].
