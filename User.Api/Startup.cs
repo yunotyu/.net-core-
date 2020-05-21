@@ -32,6 +32,7 @@ using zipkin4net.Transport.Http;
 using zipkin4net.Tracers;
 using Microsoft.Extensions.Logging.Console;
 using zipkin4net.Middleware;
+using Nest;
 
 namespace User.Api
 {
@@ -96,11 +97,30 @@ namespace User.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //注入NEST的ES连接对象
+            services.AddScoped<IElasticClient, ElasticClient>(sp =>
+            {
+                ElasticClient client;
+                try
+                {
+                    var node = new Uri("http://127.0.0.1:9200");
+                    var settings = new ConnectionSettings(node);
+                    client = new ElasticClient(settings);
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+                return client;
+            });
+
             services.AddDbContext<UserContext>(options =>
             {
                 options.UseMySQL(Configuration.GetConnectionString("Mysql"));
             });
 
+            
             //可以在后面的控制器的构造函数中使用IHttpContextAccessor来使用HttpContext,不能直接在控制器的构造函数里使用HttpContext属性
             //在控制器构造函数中时HttpContext属性的值是null
             services.AddHttpContextAccessor();
@@ -212,6 +232,8 @@ namespace User.Api
             app.UseMvc();
             InitUserData(app);
         }
+
+       
 
         private async Task InitUserData(IApplicationBuilder app, int? retry = 0)
         {

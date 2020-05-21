@@ -1,0 +1,78 @@
+2020-05-18 08:56:54.209 +08:00 [identitys_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-18 08:56:54.339 +08:00 [identitys_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-18 08:56:54.339 +08:00 [identitys_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-18 08:56:54.340 +08:00 [identitys_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-18 08:56:54.340 +08:00 [identitys_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-18 08:56:54.340 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-18 08:56:54.341 +08:00 [identitys_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-18 08:56:54.341 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-18 08:56:54.478 +08:00 [identitys_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-18 08:56:54.479 +08:00 [identitys_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-18 08:56:54.479 +08:00 [identitys_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-18 08:56:54.944 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-18 08:56:55.661 +08:00 [identitys_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=5].
+2020-05-18 08:56:56.217 +08:00 [identitys_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=26].
+2020-05-18 08:56:57.413 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0499909s
+2020-05-18 08:57:03.364 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0076765s
+2020-05-18 08:57:06.353 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0027532s
+2020-05-18 08:57:09.352 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0025899s
+2020-05-18 08:57:12.361 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0082732s
+2020-05-18 08:57:18.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0024383s
+2020-05-18 08:57:21.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0023485s
+2020-05-18 08:57:24.353 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0032964s
+2020-05-18 08:57:24.369 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 10M ThreadPool 32764 32767 1000 1000
+2020-05-18 08:57:24.369 +08:00 [identitys_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/18 0:57:24 +00:00
+2020-05-18 08:57:27.353 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0021389s
+2020-05-18 08:57:33.363 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0106560s
+2020-05-18 08:57:36.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017318s
+2020-05-18 08:57:39.355 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017620s
+2020-05-18 08:57:42.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0021186s
+2020-05-18 08:57:48.358 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0020632s
+2020-05-18 08:57:51.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0021482s
+2020-05-18 08:57:54.384 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 11M ThreadPool 32759 32767 1000 1000
+2020-05-18 08:57:54.384 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0329857s
+2020-05-18 08:57:57.358 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0023122s
+2020-05-18 08:58:03.353 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0019644s
+2020-05-18 08:58:06.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019420s
+2020-05-18 08:58:09.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0019020s
+2020-05-18 08:58:12.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0021492s
+2020-05-18 08:58:18.352 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0026275s
+2020-05-18 08:58:21.341 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014422s
+2020-05-18 08:58:24.353 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 13M ThreadPool 32756 32767 1000 1000
+2020-05-18 08:58:24.359 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0081281s
+2020-05-18 08:58:24.359 +08:00 [identitys_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/18 0:58:24 +00:00
+2020-05-18 08:58:27.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0026350s
+2020-05-18 08:58:33.358 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0024191s
+2020-05-18 08:58:36.341 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0017433s
+2020-05-18 08:58:39.353 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015949s
+2020-05-18 08:58:42.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0025560s
+2020-05-18 08:58:48.343 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0028508s
+2020-05-18 08:58:51.356 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0014666s
+2020-05-18 08:58:54.353 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0.015625 GenCollectCount 0 0 0 14M ThreadPool 32757 32767 1000 1000
+2020-05-18 08:58:54.356 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0056093s
+2020-05-18 08:58:57.357 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0055510s
+2020-05-18 08:59:03.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0022696s
+2020-05-18 08:59:06.355 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0016834s
+2020-05-18 08:59:09.354 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015643s
+2020-05-18 08:59:12.352 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0021993s
+2020-05-18 08:59:18.355 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 2 trace segment. cost: 00:00:00.0019125s
+2020-05-18 08:59:21.358 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.SegmentReporter : Report 1 trace segment. cost: 00:00:00.0015284s
+2020-05-18 17:20:20.508 +08:00 [identitys_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-18 17:20:20.546 +08:00 [identitys_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-18 17:20:20.546 +08:00 [identitys_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-18 17:20:20.546 +08:00 [identitys_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-18 17:20:20.546 +08:00 [identitys_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-18 17:20:20.546 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-18 17:20:20.547 +08:00 [identitys_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-18 17:20:20.547 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-18 17:20:20.598 +08:00 [identitys_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [HttpHandlerDiagnosticListener].
+2020-05-18 17:20:20.599 +08:00 [identitys_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-18 17:20:20.599 +08:00 [identitys_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-18 17:20:20.694 +08:00 [identitys_api] [Information] SkyApm.Service.RegisterService : Stopped instrument service RegisterService.
+2020-05-18 17:20:20.694 +08:00 [identitys_api] [Information] SkyApm.Service.PingService : Stopped instrument service PingService.
+2020-05-18 17:20:20.694 +08:00 [identitys_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Stopped instrument service ServiceDiscoveryV5Service.
+2020-05-18 17:20:20.694 +08:00 [identitys_api] [Information] SkyApm.Service.SegmentReportService : Stopped instrument service SegmentReportService.
+2020-05-18 17:20:20.695 +08:00 [identitys_api] [Information] SkyApm.Service.CLRStatsService : Stopped instrument service CLRStatsService.
+2020-05-18 17:20:20.695 +08:00 [identitys_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Stopped instrument service SimpleCountSamplingInterceptor.
+2020-05-18 17:20:20.695 +08:00 [identitys_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Stopped instrument service ConnectService.
+2020-05-18 17:20:20.695 +08:00 [identitys_api] [Information] SkyApm.InstrumentStartup : Stopped SkyAPM .NET Core Agent.

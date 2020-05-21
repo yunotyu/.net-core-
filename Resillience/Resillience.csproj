@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Polly" Version="7.2.0" />
+    <PackageReference Include="SkyAPM.Agent.AspNetCore" Version="0.9.0" />
   </ItemGroup>
 
   <ItemGroup>

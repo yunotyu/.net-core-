@@ -1,0 +1,32 @@
+2020-05-18 08:56:53.778 +08:00 [gateways_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-18 08:56:53.810 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-18 08:56:53.810 +08:00 [gateways_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-18 08:56:53.810 +08:00 [gateways_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-18 08:56:53.810 +08:00 [gateways_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-18 08:56:53.811 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-18 08:56:53.811 +08:00 [gateways_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-18 08:56:53.811 +08:00 [gateways_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-18 08:56:53.965 +08:00 [gateways_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-18 08:56:53.966 +08:00 [gateways_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-18 08:56:54.337 +08:00 [gateways_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-18 08:56:55.351 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=7].
+2020-05-18 08:56:55.981 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=25].
+2020-05-18 08:57:23.849 +08:00 [gateways_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/18 0:57:23 +00:00
+2020-05-18 08:57:23.857 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 9M ThreadPool 32764 32767 1000 1000
+2020-05-18 08:57:53.820 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 9M ThreadPool 32761 32767 1000 1000
+2020-05-18 08:58:23.831 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 9M ThreadPool 32757 32767 1000 1000
+2020-05-18 08:58:23.831 +08:00 [gateways_api] [Information] SkyApm.Service.PingService : Ping server @2020/5/18 0:58:23 +00:00
+2020-05-18 08:58:53.812 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Report CLR Stats. CPU UsagePercent 0 GenCollectCount 0 0 0 10M ThreadPool 32761 32767 1000 1000
+2020-05-18 17:20:19.734 +08:00 [gateways_api] [Information] SkyApm.InstrumentStartup : Initializing ...
+2020-05-18 17:20:19.769 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Loaded instrument service [SkyApm.Service.RegisterService].
+2020-05-18 17:20:19.769 +08:00 [gateways_api] [Information] SkyApm.Service.PingService : Loaded instrument service [SkyApm.Service.PingService].
+2020-05-18 17:20:19.769 +08:00 [gateways_api] [Information] SkyApm.Service.ServiceDiscoveryV5Service : Loaded instrument service [SkyApm.Service.ServiceDiscoveryV5Service].
+2020-05-18 17:20:19.770 +08:00 [gateways_api] [Information] SkyApm.Service.SegmentReportService : Loaded instrument service [SkyApm.Service.SegmentReportService].
+2020-05-18 17:20:19.770 +08:00 [gateways_api] [Information] SkyApm.Service.CLRStatsService : Loaded instrument service [SkyApm.Service.CLRStatsService].
+2020-05-18 17:20:19.770 +08:00 [gateways_api] [Information] SkyApm.Sampling.SimpleCountSamplingInterceptor : Loaded instrument service [SkyApm.Sampling.SimpleCountSamplingInterceptor].
+2020-05-18 17:20:19.770 +08:00 [gateways_api] [Information] SkyApm.Transport.Grpc.V6.ConnectService : Loaded instrument service [SkyApm.Transport.Grpc.V6.ConnectService].
+2020-05-18 17:20:19.857 +08:00 [gateways_api] [Information] SkyApm.Diagnostics.TracingDiagnosticProcessorObserver : Loaded diagnostic listener [Microsoft.AspNetCore].
+2020-05-18 17:20:19.857 +08:00 [gateways_api] [Information] SkyApm.InstrumentStartup : Started SkyAPM .NET Core Agent.
+2020-05-18 17:20:19.940 +08:00 [gateways_api] [Information] SkyApm.Transport.Grpc.ConnectionManager : Connected server[localhost:11800].
+2020-05-18 17:20:20.432 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Registered Service[Id=7].
+2020-05-18 17:20:20.991 +08:00 [gateways_api] [Information] SkyApm.Service.RegisterService : Registered ServiceInstance[Id=32].

@@ -162,6 +162,24 @@
           "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.dll": {}
         }
       },
+      "Elasticsearch.Net/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "NETStandard.Library": "1.6.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Elasticsearch.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Elasticsearch.Net.dll": {}
+        }
+      },
       "FluentAssertions/5.10.3": {
         "type": "package",
         "dependencies": {
@@ -2140,6 +2158,26 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/MySqlConnector.dll": {}
+        }
+      },
+      "NEST/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Elasticsearch.Net": "[6.0.0, 7.0.0)",
+          "NETStandard.Library": "1.6.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Runtime.Serialization.Formatters": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Nest.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Nest.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -4939,6 +4977,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.0",
+          "SkyAPM.Agent.AspNetCore": "0.9.0",
           "log4net": "2.0.8"
         },
         "compile": {
@@ -4967,6 +5006,7 @@
           "Microsoft.Extensions.Options": "3.1.0",
           "Microsoft.Extensions.Primitives": "3.1.0",
           "MySql.Data.EntityFrameworkCore": "8.0.19",
+          "NEST": "6.0.0",
           "Resillience": "1.0.0",
           "SkyAPM.Agent.AspNetCore": "0.9.0",
           "log4net": "2.0.8",
@@ -5155,6 +5195,23 @@
         "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.dll",
         "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.pdb",
         "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.xml"
+      ]
+    },
+    "Elasticsearch.Net/6.0.0": {
+      "sha512": "z98PpOqlLQ9nJPTyFgBdXSrFu9ywgZhPpmqDUyvJgCd2x1lzD0wKz+2gL1ETZpLsTJokFfJCW7JyOxSwPtFeuQ==",
+      "type": "package",
+      "path": "elasticsearch.net/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elasticsearch.net.6.0.0.nupkg.sha512",
+        "elasticsearch.net.nuspec",
+        "lib/net45/Elasticsearch.Net.dll",
+        "lib/net45/Elasticsearch.Net.xml",
+        "lib/net46/Elasticsearch.Net.dll",
+        "lib/net46/Elasticsearch.Net.xml",
+        "lib/netstandard1.3/Elasticsearch.Net.dll",
+        "lib/netstandard1.3/Elasticsearch.Net.xml"
       ]
     },
     "FluentAssertions/5.10.3": {
@@ -7424,6 +7481,23 @@
         "lib/netstandard2.0/MySqlConnector.dll",
         "mysqlconnector.0.47.1.nupkg.sha512",
         "mysqlconnector.nuspec"
+      ]
+    },
+    "NEST/6.0.0": {
+      "sha512": "YmMzSVcTeuf4WNg1dGSUS8cESUENgtehpXolqYRNUHvBTP6/iQa1BqySQ8t0aVQTU3BK56UJXdq98qz9QnyR6Q==",
+      "type": "package",
+      "path": "nest/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Nest.dll",
+        "lib/net45/Nest.xml",
+        "lib/net46/Nest.dll",
+        "lib/net46/Nest.xml",
+        "lib/netstandard1.3/Nest.dll",
+        "lib/netstandard1.3/Nest.xml",
+        "nest.6.0.0.nupkg.sha512",
+        "nest.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {

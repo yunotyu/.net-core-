@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Nest;
 using Resillience;
 using User.Identity.Authentication;
 using User.Identity.Entities;
@@ -107,37 +108,26 @@ namespace User.Identity
             lifetime.ApplicationStarted.Register(RegisterService);
             lifetime.ApplicationStopped.Register(DelRegisterService);
 
-            //注册到zipkin
-            RegisterZipkinTrace(app, lifetime, loggerFactory);
+            ConnectES();
 
             app.UseIdentityServer();
             app.UseMvc();
         }
 
-
-        //需要在每个服务都注册到zipkin，不然某个服务如果用到，没有注册到zipkin，那么无法看到
-        public void RegisterZipkinTrace(IApplicationBuilder app, IApplicationLifetime lifetime, ILoggerFactory loggerFactory)
+        //连接到elastic search
+        private void ConnectES()
         {
-            lifetime.ApplicationStarted.Register(() =>
+            try
             {
-                //SamplingRate监控所有请求，0.5f只监控一半的请求,有些请求可能监控不到
-                zipkin4net.TraceManager.SamplingRate = 1.0f;
-                //注册这个服务到zipskin
-                var httpSender = new HttpZipkinSender("http://127.0.0.1:9411", "application/json");
-                //需要安装zipkin4net.middleware.aspnetcore
-                var log = new TracingLogger(loggerFactory, "zipkin4net");
-                var tracer = new ZipkinTracer(httpSender, new JSONSpanSerializer(), new Statistics());
-                TraceManager.RegisterTracer(tracer);
-                TraceManager.Start(log);
-            });
-
-            lifetime.ApplicationStopped.Register(() =>
+                var node = new Uri("http://127.0.0.1:9200");
+                var settings = new ConnectionSettings(node);
+                var client = new ElasticClient(settings);
+            }
+            catch (Exception ex)
             {
-                //停止zipkin对这个服务的监控
-                TraceManager.Stop();
-            });
 
-            app.UseTracing("identity_api01");
+                throw;
+            }
         }
 
 

@@ -5700,6 +5700,7 @@
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.0",
+          "SkyAPM.Agent.AspNetCore": "0.9.0",
           "log4net": "2.0.8"
         },
         "compile": {
